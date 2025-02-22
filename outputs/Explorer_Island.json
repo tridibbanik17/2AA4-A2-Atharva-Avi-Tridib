@@ -1,36 +1,28 @@
-[
-  {
-    "data": {
-      "heading": "E",
-      "men": 5,
-      "contracts": [
-        {
-          "amount": 1000,
-          "resource": "WOOD"
-        }
-      ],
-      "budget": 7000
-    },
-    "part": "Engine",
-    "time": 1740255659486,
-    "meth": "initialize"
+[{
+  "data": {
+    "heading": "E",
+    "men": 5,
+    "contracts": [{
+      "amount": 1000,
+      "resource": "WOOD"
+    }],
+    "budget": 7000
   },
-  {
-    "data": {
-      "action": "stop"
-    },
-    "part": "Explorer",
-    "time": 1740255659601,
-    "meth": "takeDecision"
+  "part": "Engine",
+  "time": 1740257313625,
+  "meth": "initialize"
+},{
+  "data": {"action": "stop"},
+  "part": "Explorer",
+  "time": 1740257313732,
+  "meth": "takeDecision"
+},{
+  "data": {
+    "cost": 6,
+    "extras": {},
+    "status": "OK"
   },
-  {
-    "data": {
-      "cost": 6,
-      "extras": {},
-      "status": "OK"
-    },
-    "part": "Engine",
-    "time": 1740255659617,
-    "meth": "takeDecision"
-  }
-]
+  "part": "Engine",
+  "time": 1740257313737,
+  "meth": "takeDecision"
+}]
