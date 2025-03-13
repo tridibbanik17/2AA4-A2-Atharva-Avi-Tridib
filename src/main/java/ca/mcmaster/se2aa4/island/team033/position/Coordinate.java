@@ -1,12 +1,12 @@
 package ca.mcmaster.se2aa4.island.team033.position;
 
 public class Coordinate {
-    private int x;
-    private int y;
+    private int x; // X-coordinate
+    private int y; // Y-coordinate
 
     public Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
+        this.x = x; 
+        this.y = y; 
     }
 
     public int getX() {
@@ -25,6 +25,7 @@ public class Coordinate {
         this.y = y;
     }
 
+    // Calculates the Euclidean distance between this coordinate and another
     public double distanceTo(Coordinate other) {
         return Math.sqrt(Math.pow((double)other.getX() - this.x, 2) + Math.pow((double)other.getY() - this.y, 2));
     }
