@@ -15,7 +15,7 @@ public class ListMap implements Map {
         // Check if the provided PointOfInterest has a valid type
         if (poi.getType() == null) {
             throw new IllegalArgumentException("Invalid PointOfInterest type");
-        } else switch (poi.getType()) {         // Add the PointOfInterest to the appropriate list
+        } else switch (poi.getType()) { // Add the PointOfInterest to the appropriate list
             case CREEK -> creeks.add(poi);
             case EMERGENCY_SITE -> emergencySite = poi;
             default -> throw new IllegalArgumentException("Invalid PointOfInterest type");
@@ -38,7 +38,12 @@ public class ListMap implements Map {
             throw new NoSuchElementException("No creeks available");
         }
 
-        Coordinate referenceLocation = emergencySite != null ? emergencySite.getLocation() : new Coordinate(0, 0);
+        Coordinate referenceLocation;
+        if (emergencySite != null) {
+            referenceLocation = emergencySite.getLocation();
+        } else {
+            referenceLocation = new Coordinate(0, 0);
+        }
         PointOfInterest closestCreek = creeks.get(0);
         double minDistance = referenceLocation.distanceTo(closestCreek.getLocation());
 

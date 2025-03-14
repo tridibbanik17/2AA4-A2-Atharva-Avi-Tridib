@@ -82,6 +82,10 @@ public class GridSearch implements Search {
             if (!sites.isEmpty()) {
                 map.addPointOfInterest(new PointOfInterest(sites.getString(0), PointOfInterestType.EMERGENCY_SITE, drone.getLocation()));
             }
+            else {
+                logger.error("THE SITE IS NOT FOUND");
+            }
         }
+
     }
 }

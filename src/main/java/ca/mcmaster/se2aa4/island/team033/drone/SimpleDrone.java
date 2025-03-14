@@ -9,7 +9,7 @@ public class SimpleDrone implements Drone {
 
     private Integer batteryLevel;
     private Direction headingDirection;
-    private Coordinate location;
+    private final Coordinate location;
 
     public SimpleDrone(Integer batteryLevel, Direction headingDirection) {
         this.batteryLevel = batteryLevel;
