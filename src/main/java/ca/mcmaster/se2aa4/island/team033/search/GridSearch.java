@@ -40,15 +40,15 @@ public class GridSearch implements Search {
 
         // If the stage is the last stage or battery level is below 50%, stop the drone
         if (stage.isLastStage() || drone.getBatteryLevel() < 50) {
-            command = controller.stop();
+            command = controller.stopCommand();
         } else {
             // If the current stage is not finished, get the next command for that stage
             if (!stage.isFinished()) {
-                command = stage.getDroneCommand(controller, drone.getMovingDirection());
+                command = stage.getDroneCommand(controller, drone.getHeading());
             } else {
                 // If the stage is finished, move to the next stage and get the command for it
                 stage = stage.getNextStage();
-                command = stage.getDroneCommand(controller, drone.getMovingDirection());
+                command = stage.getDroneCommand(controller, drone.getHeading());
             }
         }
         return command;
