@@ -28,7 +28,7 @@ public class DroneController implements Controller {
         JSONObject decision = new JSONObject();
         JSONObject params = new JSONObject();
 
-        decision.put(decisionKey, "movingDirection");
+        decision.put(decisionKey, "heading");
         params.put("direction", dir.getSymbol());
         decision.put("parameters", params);
 
