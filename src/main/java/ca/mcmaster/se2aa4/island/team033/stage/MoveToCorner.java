@@ -1,9 +1,9 @@
 package ca.mcmaster.se2aa4.island.team033.stage;
 
+import org.json.JSONObject;
+
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
-
-import org.json.JSONObject;
 
 // Stage that moves the drone towards the corner of the island.
 // The drone scans the environment to determine the best path and reach the corner.
@@ -34,12 +34,12 @@ public class MoveToCorner implements Stage {
     public String getDroneCommand(Controller controller, Direction dir) {
         // Return the command based on the current state
         return switch (state) {
-            case ECHO_LEFT -> controller.echo(dir.getLeft());
-            case ECHO_RIGHT -> controller.echo(dir.getRight());
-            case TURN_TO_CORNER -> controller.movingDirection(distanceRight < distanceLeft ? dir.getRight() : dir.getLeft());
-            case FLY_TO_CORNER -> controller.fly();
-            case TURN_INWARD -> controller.movingDirection(distanceRight < distanceLeft ? dir.getRight() : dir.getLeft());
-            default -> controller.stop();
+            case ECHO_LEFT -> controller.echoCommand(dir.getLeft());
+            case ECHO_RIGHT -> controller.echoCommand(dir.getRight());
+            case TURN_TO_CORNER -> controller.headingCommand(distanceRight < distanceLeft ? dir.getRight() : dir.getLeft());
+            case FLY_TO_CORNER -> controller.flyCommand();
+            case TURN_INWARD -> controller.headingCommand(distanceRight < distanceLeft ? dir.getRight() : dir.getLeft());
+            default -> controller.stopCommand();
         };
     }
 

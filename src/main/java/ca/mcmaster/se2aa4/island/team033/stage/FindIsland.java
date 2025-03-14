@@ -1,9 +1,9 @@
 package ca.mcmaster.se2aa4.island.team033.stage;
 
+import org.json.JSONObject;
+
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
-
-import org.json.JSONObject;
 
 // Search for the island by flying and echoing signals.
 // Attempt to locate the island and proceed to the next stage once it is found.
@@ -37,14 +37,14 @@ public class FindIsland implements Stage {
     public String getDroneCommand(Controller controller, Direction dir) {
         // Determine the drone's command based on the current state
         return switch (state) {
-            case State.FLY -> controller.fly();
-            case State.ECHO_LEFT -> controller.echo(dir.getLeft());
-            case State.ECHO_RIGHT -> controller.echo(dir.getRight());
-            case State.TURN_LEFT -> controller.movingDirection(dir.getLeft());
-            case State.TURN_RIGHT -> controller.movingDirection(dir.getRight());
-            case State.GET_RANGE -> controller.echo(dir);
-            case State.FLY_TO_ISLAND -> controller.fly();
-            default -> controller.stop();
+            case State.FLY -> controller.flyCommand();
+            case State.ECHO_LEFT -> controller.echoCommand(dir.getLeft());
+            case State.ECHO_RIGHT -> controller.echoCommand(dir.getRight());
+            case State.TURN_LEFT -> controller.headingCommand(dir.getLeft());
+            case State.TURN_RIGHT -> controller.headingCommand(dir.getRight());
+            case State.GET_RANGE -> controller.echoCommand(dir);
+            case State.FLY_TO_ISLAND -> controller.flyCommand();
+            default -> controller.stopCommand();
         };
     }
 

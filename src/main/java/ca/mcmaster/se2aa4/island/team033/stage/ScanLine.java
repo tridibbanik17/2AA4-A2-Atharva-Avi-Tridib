@@ -1,10 +1,10 @@
 package ca.mcmaster.se2aa4.island.team033.stage;
 
-import ca.mcmaster.se2aa4.island.team033.drone.Controller;
-import ca.mcmaster.se2aa4.island.team033.position.Direction;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import ca.mcmaster.se2aa4.island.team033.drone.Controller;
+import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
     // ScanLine is a stage where the drone scans the environment to detect if it is off the island.
     // The drone uses echo and movement commands to gather information about its location.
@@ -35,10 +35,10 @@ import org.json.JSONObject;
     public String getDroneCommand(Controller controller, Direction dir) {
         // Command the drone to perform an action based on the current state
         return switch (state) {
-            case State.FLY -> controller.fly();
-            case State.SCAN -> controller.scan();
-            case State.ECHO_FRONT -> controller.echo(dir);
-            default -> controller.stop();
+            case State.FLY -> controller.flyCommand();
+            case State.SCAN -> controller.scanCommand();
+            case State.ECHO_FRONT -> controller.echoCommand(dir);
+            default -> controller.stopCommand();
         };
     }
 

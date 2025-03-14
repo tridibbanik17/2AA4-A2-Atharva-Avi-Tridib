@@ -1,9 +1,9 @@
 package ca.mcmaster.se2aa4.island.team033.stage;
 
+import org.json.JSONObject;
+
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
-
-import org.json.JSONObject;
 
 // UTurn is a stage where the drone turns 180 degrees (makes a U-turn) in order to return to its path.
 // The drone may turn left or right depending on the initial parameters.
@@ -40,7 +40,7 @@ public class UTurn implements Stage {
         if (turnCount.equals(turnOpposite)) {
             command = turnCommand(controller, !turnLeft, dir);
         } else if (turnCount.equals(flyDistance)) {
-            command = controller.fly();
+            command = controller.flyCommand();
         } else {
             command = turnCommand(controller, turnLeft, dir);
         }
@@ -81,6 +81,6 @@ public class UTurn implements Stage {
     // The direction of the turn is determined by the turnLeft flag and the current direction.
     private String turnCommand(Controller controller, boolean dirLeft, Direction direction) {
         direction = dirLeft ? direction.getLeft() : direction.getRight();
-        return controller.movingDirection(direction);
+        return controller.headingCommand(direction);
     }
 }
