@@ -14,7 +14,7 @@ public class DroneController implements Controller {
     }
 
     @Override
-    public String fly() {
+    public String flyCommand() {
         // Prepare a JSON response for the "fly" action
         JSONObject decision = new JSONObject();
         decision.put(decisionKey, "fly");
@@ -23,19 +23,19 @@ public class DroneController implements Controller {
     }
 
     @Override
-    public String movingDirection(Direction dir) {
-        // Prepare a JSON response for the "movingDirection" action
+    public String headingCommand(Direction dir) {
+        // Prepare a JSON response for the "heading" action
         JSONObject decision = new JSONObject();
         JSONObject params = new JSONObject();
 
-        decision.put(decisionKey, "movingDirection");
+        decision.put(decisionKey, "heading");
         params.put("direction", dir.getSymbol());
         decision.put("parameters", params);
 
         // Update drone direction based on the input
-        if (dir.equals(drone.getMovingDirection().getRight())) {
+        if (dir.equals(drone.getHeading().getRight())) {
             drone.turnRight();
-        } else if (dir.equals(drone.getMovingDirection().getLeft())) {
+        } else if (dir.equals(drone.getHeading().getLeft())) {
             drone.turnLeft();
         }
 
@@ -43,7 +43,7 @@ public class DroneController implements Controller {
     }
 
     @Override
-    public String echo(Direction dir) {
+    public String echoCommand(Direction dir) {
         // Prepare a JSON response for the "echo" action
         JSONObject decision = new JSONObject();
         JSONObject params = new JSONObject();
@@ -56,7 +56,7 @@ public class DroneController implements Controller {
     }
 
     @Override
-    public String scan() {
+    public String scanCommand() {
         // Prepare a JSON response for the "scan" action
         JSONObject decision = new JSONObject();
         decision.put(decisionKey, "scan");
@@ -64,7 +64,7 @@ public class DroneController implements Controller {
     }
 
     @Override
-    public String stop() {
+    public String stopCommand() {
         // Prepare a JSON response for the "stop" action
         JSONObject decision = new JSONObject();
         decision.put(decisionKey, "stop");

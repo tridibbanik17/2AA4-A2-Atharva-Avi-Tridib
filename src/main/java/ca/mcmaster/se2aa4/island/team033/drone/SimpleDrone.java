@@ -8,12 +8,12 @@ import ca.mcmaster.se2aa4.island.team033.position.Direction;
 public class SimpleDrone implements Drone {
 
     private Integer batteryLevel;
-    private Direction movingDirection;
+    private Direction headingDirection;
     private Coordinate location;
 
-    public SimpleDrone(Integer batteryLevel, Direction movingDirection) {
+    public SimpleDrone(Integer batteryLevel, Direction headingDirection) {
         this.batteryLevel = batteryLevel;
-        this.movingDirection = movingDirection;
+        this.headingDirection = headingDirection;
         this.location = new Coordinate(0, 0); // Initial position at origin
     }
 
@@ -28,8 +28,8 @@ public class SimpleDrone implements Drone {
     }
 
     @Override
-    public Direction getMovingDirection() {
-        return this.movingDirection;
+    public Direction getHeading() {
+        return this.headingDirection;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class SimpleDrone implements Drone {
 
     @Override
     public void moveForward() {
-        switch (this.movingDirection) {
+        switch (this.headingDirection) {
             case Direction.NORTH -> location.setY(location.getY() + 1);
             case Direction.EAST -> location.setX(location.getX() + 1);
             case Direction.SOUTH -> location.setY(location.getY() - 1);
@@ -51,7 +51,7 @@ public class SimpleDrone implements Drone {
     @Override
     public void turnRight() {
         // Update direction to the right and adjust the coordinates
-        switch (this.movingDirection) {
+        switch (this.headingDirection) {
             case Direction.NORTH -> {
                 location.setY(location.getY() + 1);
                 location.setX(location.getX() + 1);
@@ -70,13 +70,13 @@ public class SimpleDrone implements Drone {
             }
             default -> throw new IllegalStateException();
         }
-        movingDirection = movingDirection.getRight();
+        headingDirection = headingDirection.getRight();
     }
 
     @Override
     public void turnLeft() {
         // Update direction to the left and adjust the coordinates
-        switch (this.movingDirection) {
+        switch (this.headingDirection) {
             case Direction.NORTH -> {
                 location.setY(location.getY() + 1);
                 location.setX(location.getX() - 1);
@@ -95,6 +95,6 @@ public class SimpleDrone implements Drone {
             }
             default -> throw new IllegalStateException();
         }
-        movingDirection = movingDirection.getLeft();
+        headingDirection = headingDirection.getLeft();
     }
 }
