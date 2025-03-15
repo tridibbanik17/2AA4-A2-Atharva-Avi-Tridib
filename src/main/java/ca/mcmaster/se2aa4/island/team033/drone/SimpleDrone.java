@@ -24,7 +24,7 @@ public class SimpleDrone implements Drone {
 
     @Override
     public void drainBattery(Integer cost) {
-        this.batteryLevel -= cost;
+        this.batteryLevel = this.batteryLevel - cost;
     }
 
     @Override
@@ -39,62 +39,37 @@ public class SimpleDrone implements Drone {
 
     @Override
     public void moveForward() {
-        switch (this.headingDirection) {
-            case Direction.NORTH -> location.setY(location.getY() + 1);
-            case Direction.EAST -> location.setX(location.getX() + 1);
-            case Direction.SOUTH -> location.setY(location.getY() - 1);
-            case Direction.WEST -> location.setX(location.getX() - 1);
-            default -> throw new IllegalStateException();
-        }
+        int deltaX = (headingDirection == Direction.EAST) ? 1 : (headingDirection == Direction.WEST) ? -1 : 0;
+        int deltaY = (headingDirection == Direction.NORTH) ? 1 : (headingDirection == Direction.SOUTH) ? -1 : 0;
+
+        location.setX(location.getX() + deltaX);
+        location.setY(location.getY() + deltaY);
     }
+
 
     @Override
     public void turnRight() {
         // Update direction to the right and adjust the coordinates
-        switch (this.headingDirection) {
-            case Direction.NORTH -> {
-                location.setY(location.getY() + 1);
-                location.setX(location.getX() + 1);
-            }
-            case Direction.EAST -> {
-                location.setY(location.getY() - 1);
-                location.setX(location.getX() + 1);
-            }
-            case Direction.SOUTH -> {
-                location.setY(location.getY() - 1);
-                location.setX(location.getX() - 1);
-            }
-            case Direction.WEST -> {
-                location.setY(location.getY() + 1);
-                location.setX(location.getX() - 1);
-            }
-            default -> throw new IllegalStateException();
-        }
+        int deltaX = (headingDirection == Direction.EAST || headingDirection == Direction.SOUTH) ? 1 : -1;
+        int deltaY = (headingDirection == Direction.NORTH || headingDirection == Direction.WEST) ? 1 : -1;
+
+        location.setX(location.getX() + deltaX);
+        location.setY(location.getY() + deltaY);
+
         headingDirection = headingDirection.getRight();
     }
+
 
     @Override
     public void turnLeft() {
         // Update direction to the left and adjust the coordinates
-        switch (this.headingDirection) {
-            case Direction.NORTH -> {
-                location.setY(location.getY() + 1);
-                location.setX(location.getX() - 1);
-            }
-            case Direction.EAST -> {
-                location.setY(location.getY() + 1);
-                location.setX(location.getX() + 1);
-            }
-            case Direction.SOUTH -> {
-                location.setY(location.getY() - 1);
-                location.setX(location.getX() + 1);
-            }
-            case Direction.WEST -> {
-                location.setY(location.getY() - 1);
-                location.setX(location.getX() - 1);
-            }
-            default -> throw new IllegalStateException();
-        }
+        int deltaX = (headingDirection == Direction.WEST || headingDirection == Direction.NORTH) ? -1 : 1;
+        int deltaY = (headingDirection == Direction.NORTH || headingDirection == Direction.EAST) ? 1 : -1;
+
+        location.setX(location.getX() + deltaX);
+        location.setY(location.getY() + deltaY);
+
         headingDirection = headingDirection.getLeft();
     }
+
 }
