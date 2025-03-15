@@ -17,7 +17,7 @@ import ca.mcmaster.se2aa4.island.team033.position.Direction;
         ECHO_FRONT // Echo info in front of the drone
     }
 
-    private final boolean turnLeft;   // Boolean to determine if the drone will turn left
+    private boolean turnLeft;   // Boolean to determine if the drone will turn left
     private boolean offIsland;        // Tracks if the drone is off the island
     private boolean hasMoved;         // Tracks if the drone has moved
     private boolean moveOutwards;     // Tracks if the drone is moving outwards
@@ -35,9 +35,9 @@ import ca.mcmaster.se2aa4.island.team033.position.Direction;
     public String getDroneCommand(Controller controller, Direction dir) {
         // Command the drone to perform an action based on the current state
         return switch (state) {
-            case State.FLY -> controller.flyCommand();
-            case State.SCAN -> controller.scanCommand();
-            case State.ECHO_FRONT -> controller.echoCommand(dir);
+            case FLY -> controller.flyCommand();
+            case SCAN -> controller.scanCommand();
+            case ECHO_FRONT -> controller.echoCommand(dir);
             default -> controller.stopCommand();
         };
     }
@@ -59,10 +59,12 @@ import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
             case ECHO_FRONT -> {
                 String echoStatus = info.getString("found");
-                if (echoStatus.equals("LAND")) {
-                    state = State.FLY;  // Transition to flying if land is detected
+                if (echoStatus.equals("OUT_OF_RANGE")) {
+                    offIsland = true;  // If echo status is out of range, the drone has gone off the island
+                    moveOutwards = (info.getInt("range") >= 3); // moveOutwards is true if range is greater of equal to 3 while echo status is out of range
                 } else {
-                    offIsland = true;  // Mark that the drone is off the island
+                    state = State.FLY;  // Mark that the drone is off the island
+                    hasMoved = true;
                 }
             }
         }
