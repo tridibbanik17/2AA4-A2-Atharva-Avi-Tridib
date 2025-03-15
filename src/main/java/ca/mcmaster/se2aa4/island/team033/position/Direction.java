@@ -4,7 +4,7 @@ package ca.mcmaster.se2aa4.island.team033.position;
 public enum Direction {
     NORTH("N"), EAST("E"), SOUTH("S"), WEST("W");
 
-    private final String symbol;
+    private String symbol;
 
     // Constructor to associate the direction with its symbol
     Direction(String symbol) {
