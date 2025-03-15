@@ -32,16 +32,30 @@ public class MoveToCorner implements Stage {
 
     @Override
     public String getDroneCommand(Controller controller, Direction dir) {
-        // Return the command based on the current state
+        // Determine heading direction based on the state and distance comparison
+        Direction turnDirection = switch (state) {
+            case State.ECHO_LEFT -> dir.getLeft();
+            case State.ECHO_RIGHT -> dir.getRight();
+            case State.TURN_TO_CORNER, State.TURN_INWARD -> {
+                // Determine if the drone should turn left or right based on distance
+                turnRight = distanceRight >= distanceLeft;
+                yield turnRight ? dir.getLeft() : dir.getRight();
+            }
+            default -> null;  // Handle cases where no turn is needed
+        };
+
+        // Handle different states
         return switch (state) {
-            case ECHO_LEFT -> controller.echoCommand(dir.getLeft());
-            case ECHO_RIGHT -> controller.echoCommand(dir.getRight());
-            case TURN_TO_CORNER -> controller.headingCommand(distanceRight < distanceLeft ? dir.getRight() : dir.getLeft());
-            case FLY_TO_CORNER -> controller.flyCommand();
-            case TURN_INWARD -> controller.headingCommand(distanceRight < distanceLeft ? dir.getRight() : dir.getLeft());
+            case State.ECHO_LEFT, State.ECHO_RIGHT -> controller.echoCommand(turnDirection);
+            case State.FLY_TO_CORNER -> {
+                distanceTraveled++;
+                yield controller.flyCommand();
+            }
+            case State.TURN_TO_CORNER, State.TURN_INWARD -> controller.headingCommand(turnDirection);
             default -> controller.stopCommand();
         };
     }
+
 
     @Override
     public void processInfo(JSONObject info) {
