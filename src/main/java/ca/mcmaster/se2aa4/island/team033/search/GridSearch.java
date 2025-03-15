@@ -69,21 +69,18 @@ public class GridSearch implements Search {
         stage.processInfo(extraInfo);
 
         if (extraInfo.has("creeks")) {
-            JSONArray creeksFound = extraInfo.getJSONArray("creeks");
-            if (!creeksFound.isEmpty()) {
-                for (int i = 0; i < creeksFound.length(); i++) {
-                    map.addPointOfInterest(new PointOfInterest(creeksFound.getString(i), PointOfInterestType.CREEK, drone.getLocation()));
+            JSONArray creeksArray = extraInfo.getJSONArray("creeks");
+            if (!creeksArray.isEmpty()) {
+                for (int i = 0; i < creeksArray.length(); i++) {
+                    map.addPointOfInterest(new PointOfInterest(creeksArray.getString(i), PointOfInterestType.CREEK, drone.getLocation()));
                 }
             }
         }
 
         if (extraInfo.has("sites")) {
-            JSONArray sites = extraInfo.getJSONArray("sites");
-            if (!sites.isEmpty()) {
-                map.addPointOfInterest(new PointOfInterest(sites.getString(0), PointOfInterestType.EMERGENCY_SITE, drone.getLocation()));
-            }
-            else {
-                logger.error("THE SITE IS NOT FOUND");
+            JSONArray sitesArray = extraInfo.getJSONArray("sites");
+            if (!sitesArray.isEmpty()) {
+                map.addPointOfInterest(new PointOfInterest(sitesArray.getString(0), PointOfInterestType.EMERGENCY_SITE, drone.getLocation()));
             }
         }
 
