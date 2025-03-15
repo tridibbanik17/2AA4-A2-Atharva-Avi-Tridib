@@ -80,7 +80,11 @@ public class UTurn implements Stage {
     // Helper method to generate the turn command for the drone.
     // The direction of the turn is determined by the turnLeft flag and the current direction.
     private String turnCommand(Controller controller, boolean dirLeft, Direction direction) {
-        direction = dirLeft ? direction.getLeft() : direction.getRight();
+        if (dirLeft) {
+            direction = direction.getLeft();
+        } else {
+            direction = direction.getRight();
+        }
         return controller.headingCommand(direction);
     }
 }
