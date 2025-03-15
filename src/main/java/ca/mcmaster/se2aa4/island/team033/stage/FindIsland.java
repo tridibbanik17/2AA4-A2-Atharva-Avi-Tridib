@@ -17,8 +17,8 @@ public class FindIsland implements Stage {
         ECHO_RIGHT,
         TURN_LEFT,
         TURN_RIGHT,
-        GET_RANGE,
-        FLY_TO_ISLAND
+        REMAINING_FLIGHT_DISTANCE,
+        FLY_TOWARDS_ISLAND
     }
 
     private boolean atIsland; // Track if the drone has reached the island
@@ -42,8 +42,8 @@ public class FindIsland implements Stage {
             case State.ECHO_RIGHT -> controller.echoCommand(dir.getRight());
             case State.TURN_LEFT -> controller.headingCommand(dir.getLeft());
             case State.TURN_RIGHT -> controller.headingCommand(dir.getRight());
-            case State.GET_RANGE -> controller.echoCommand(dir);
-            case State.FLY_TO_ISLAND -> controller.flyCommand();
+            case State.REMAINING_FLIGHT_DISTANCE -> controller.echoCommand(dir);
+            case State.FLY_TOWARDS_ISLAND -> controller.flyCommand();
             default -> controller.stopCommand();
         };
     }
@@ -54,43 +54,55 @@ public class FindIsland implements Stage {
         String echoStatus;
 
         switch (state) {
-            case State.FLY -> state = State.ECHO_LEFT;
+            case State.FLY -> // Initial state: transition to left-side echo detection
+                state = State.ECHO_LEFT;
             
             case State.ECHO_LEFT -> {
+                // Retrieve detection status ("found" key) from the provided JSON
                 echoStatus = info.getString("found");
-                if (echoStatus.equals("GROUND")) { 
+                
+                if ("GROUND".equals(echoStatus)) { 
+                    // If ground is detected on the left, turn left
                     state = State.TURN_LEFT;
-                    uTurnLeft = false;
+                    uTurnLeft = false; // Not performing a U-turn
                 } else {
+                    // Otherwise, check the right side
                     state = State.ECHO_RIGHT;
                 }
             }
 
             case State.ECHO_RIGHT -> {
+                // Retrieve detection status from JSON
                 echoStatus = info.getString("found");
-                if (echoStatus.equals("GROUND")) {
+
+                if ("GROUND".equals(echoStatus)) {
+                    // If ground is detected on the right, turn right
                     state = State.TURN_RIGHT;
-                    uTurnLeft = true;
+                    uTurnLeft = true; // Mark that a U-turn is needed
                 } else {
+                    // If no ground is detected, continue flying
                     state = State.FLY;
                 }
             }
 
-            case State.TURN_LEFT -> state = State.GET_RANGE;
-            
-            case State.TURN_RIGHT -> state = State.GET_RANGE;
-
-            case State.GET_RANGE -> {
+            case State.TURN_LEFT, State.TURN_RIGHT -> // After turning, proceed to measure distance
+                state = State.REMAINING_FLIGHT_DISTANCE;
+            case State.REMAINING_FLIGHT_DISTANCE -> {
+                // Retrieve the flight range from the JSON and set the next phase
                 flightsToIsland = info.getInt("range");
-                state = State.FLY_TO_ISLAND;
+                state = State.FLY_TOWARDS_ISLAND;
             }
-            
-            case State.FLY_TO_ISLAND -> {
-                flightsToIsland--;
+
+            case State.FLY_TOWARDS_ISLAND -> {
+                // Simulate the flight progress by decrementing the distance counter
+                flightsToIsland -= 1;
                 if (flightsToIsland <= 0) {
+                    // Mark arrival at the island
                     atIsland = true;
                 }
             }
+
+            default -> throw new IllegalStateException("Unexpected state: " + state);
         }
     }
 
