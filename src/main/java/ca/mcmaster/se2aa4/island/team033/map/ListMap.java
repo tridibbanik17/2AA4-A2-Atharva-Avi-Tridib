@@ -46,15 +46,18 @@ public class ListMap implements Map {
         }
         PointOfInterest closestCreek = creeks.get(0);
         double minDistance = referenceLocation.distanceTo(closestCreek.getLocation());
-
+        int creekCount = 0;
         // Iterate through creeks to find the closest one
         for (PointOfInterest creek : creeks) {
             double distance = referenceLocation.distanceTo(creek.getLocation());
+            creekCount++;
             if (distance < minDistance) {
                 minDistance = distance;
                 closestCreek = creek;
             }
         }
+        // Uncomment to view the number of creeks discovered.
+        // return closestCreek.getId() + "\nCreek count: " + creekCount;
         return closestCreek.getId();
     }
 }
