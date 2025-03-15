@@ -6,40 +6,36 @@ import ca.mcmaster.se2aa4.island.team033.map.Map;
 
 public class NavigationReport implements Report {
 
-    // generateReport() method generates a navigation report as a formatted String based on the provided Map.
     @Override
     public String generateReport(Map map) {
         StringBuilder report = new StringBuilder();
-        report.append("Emergency Site ID: ").append(emergencySiteID(map)).append("\n");
-        report.append("Closest Creek ID: ").append(closestCreekID(map)).append("\n");
+        report.append("Emergency Site ID: ").append(getIdWithDefault(map, this::getEmergencySiteID, "emergency site")).append("\n");
+        report.append("Closest Creek ID: ").append(getIdWithDefault(map, this::getClosestCreekID, "creek")).append("\n");
         return report.toString();
     }
 
-    // Retrieve the id of the closest creek from the provided Map.
-    // If no creek is found, return a default message.
-    private String closestCreekID(Map map) {
-        String creekID;
-
+    // Retrieve the ID using the provided Map method and handle NoSuchElementException with a specific message for the item
+    private String getIdWithDefault(Map map, IdRetriever idRetriever, String itemName) {
         try {
-            creekID = map.getClosestCreekID();
+            return idRetriever.getId(map);
         } catch (NoSuchElementException e) {
-            creekID = "Could not locate a creek.";
+            return "Could not locate " + itemName + ".";
         }
-
-        return creekID;
     }
 
-    // Retrieve the id of the emergency site from the provided Map.
-    // If no emergency site is found, return a default message.
-    private String emergencySiteID(Map map) {
-        String emergencySiteID;
+    // Retrieve the ID of the closest creek
+    private String getClosestCreekID(Map map) {
+        return map.getClosestCreekID();
+    }
 
-        try {
-            emergencySiteID = map.getEmergencySiteID();
-        } catch (NoSuchElementException e) {
-            emergencySiteID = "Could not locate emergency site.";
-        }
+    // Retrieve the ID of the emergency site
+    private String getEmergencySiteID(Map map) {
+        return map.getEmergencySiteID();
+    }
 
-        return emergencySiteID;
+    // Functional interface for retrieving IDs
+    @FunctionalInterface
+    private interface IdRetriever {
+        String getId(Map map) throws NoSuchElementException;
     }
 }
