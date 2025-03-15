@@ -3,15 +3,15 @@ package ca.mcmaster.se2aa4.island.team033.drone;
 import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-// SimpleDrone is a concrete implementation of the Drone interface.
+// BasicDrone is a concrete implementation of the Drone interface.
 // It encapsulates the drone's state (battery level, heading direction, and location) and movement logic.
-public class SimpleDrone implements Drone {
+public class BasicDrone implements Drone {
 
     private Integer batteryLevel;
     private Direction headingDirection;
     private final Coordinate location;
 
-    public SimpleDrone(Integer batteryLevel, Direction headingDirection) {
+    public BasicDrone(Integer batteryLevel, Direction headingDirection) {
         this.batteryLevel = batteryLevel;
         this.headingDirection = headingDirection;
         this.location = new Coordinate(0, 0); // Initial position at origin

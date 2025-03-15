@@ -7,8 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
 import ca.mcmaster.se2aa4.island.team033.drone.Drone;
-import ca.mcmaster.se2aa4.island.team033.drone.SimpleDrone;
 import ca.mcmaster.se2aa4.island.team033.map.ListMap;
 import ca.mcmaster.se2aa4.island.team033.map.Map;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
@@ -34,7 +34,7 @@ public class Explorer implements IExplorerRaid {
         Integer batteryLevel = info.getInt("budget");
 
         this.map = new ListMap();
-        Drone drone = new SimpleDrone(batteryLevel, Direction.fromSymbol(direction));
+        Drone drone = new BasicDrone(batteryLevel, Direction.fromSymbol(direction));
         this.gridSearch = new GridSearch(drone);
         this.report = new NavigationReport();
 
