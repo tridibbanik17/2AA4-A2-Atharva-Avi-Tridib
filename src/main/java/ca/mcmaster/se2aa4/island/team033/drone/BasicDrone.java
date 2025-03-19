@@ -7,9 +7,9 @@ import ca.mcmaster.se2aa4.island.team033.position.Direction;
 // It encapsulates the drone's state (battery level, heading direction, and location) and movement logic.
 public class BasicDrone implements Drone {
 
-    private Integer batteryLevel;
-    private Direction headingDirection;
-    private final Coordinate location;
+    private Integer batteryLevel; // Current Battery level of the drone
+    private Direction headingDirection; // Current heading direction
+    private Coordinate location; // Current location
 
     public BasicDrone(Integer batteryLevel, Direction headingDirection) {
         this.batteryLevel = batteryLevel;
@@ -24,7 +24,7 @@ public class BasicDrone implements Drone {
 
     @Override
     public void drainBattery(Integer cost) {
-        this.batteryLevel = this.batteryLevel - cost;
+        this.batteryLevel = this.batteryLevel - cost; // Reduces the battery level by a specified cost depending on the action
     }
 
     @Override
@@ -39,6 +39,7 @@ public class BasicDrone implements Drone {
 
     @Override
     public void moveForward() {
+        // Move the drone forward by one unit in the current heading direction
         int deltaX = (headingDirection == Direction.EAST) ? 1 : (headingDirection == Direction.WEST) ? -1 : 0;
         int deltaY = (headingDirection == Direction.NORTH) ? 1 : (headingDirection == Direction.SOUTH) ? -1 : 0;
 
@@ -49,7 +50,7 @@ public class BasicDrone implements Drone {
 
     @Override
     public void turnRight() {
-        // Update direction to the right and adjust the coordinates
+        // Rotate the drone 90 degrees to the right and updates the location accordingly
         int deltaX = (headingDirection == Direction.EAST || headingDirection == Direction.SOUTH) ? 1 : -1;
         int deltaY = (headingDirection == Direction.NORTH || headingDirection == Direction.WEST) ? 1 : -1;
 
@@ -62,7 +63,7 @@ public class BasicDrone implements Drone {
 
     @Override
     public void turnLeft() {
-        // Update direction to the left and adjust the coordinates
+        // Rotate the drone 90 degrees to the left and updates the location accordingly
         int deltaX = (headingDirection == Direction.WEST || headingDirection == Direction.NORTH) ? -1 : 1;
         int deltaY = (headingDirection == Direction.NORTH || headingDirection == Direction.EAST) ? 1 : -1;
 
