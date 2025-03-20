@@ -51,6 +51,8 @@ public class BasicDrone implements Drone {
     @Override
     public void turnRight() {
         // Rotate the drone 90 degrees to the right and updates the location accordingly
+        // For example, if the drone's current heading direction is NORTH,
+        // the drone will move 1 unit in NORTH and 1 unit in EAST. Also, the next heading direction will be EAST. 
         int deltaX = (headingDirection == Direction.EAST || headingDirection == Direction.SOUTH) ? 1 : -1;
         int deltaY = (headingDirection == Direction.NORTH || headingDirection == Direction.WEST) ? 1 : -1;
 
@@ -64,6 +66,8 @@ public class BasicDrone implements Drone {
     @Override
     public void turnLeft() {
         // Rotate the drone 90 degrees to the left and updates the location accordingly
+        // For example, if the drone's current heading direction is NORTH,
+        // the drone will move 1 unit in NORTH and 1 unit in WEST. Also, the next heading direction will be WEST.
         int deltaX = (headingDirection == Direction.WEST || headingDirection == Direction.NORTH) ? -1 : 1;
         int deltaY = (headingDirection == Direction.NORTH || headingDirection == Direction.EAST) ? 1 : -1;
 
