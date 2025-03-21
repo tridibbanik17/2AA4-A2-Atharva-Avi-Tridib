@@ -22,7 +22,7 @@ public class FindIsland implements Stage {
     }
 
     private boolean atIsland; // Track if the drone has reached the island
-    private boolean uTurnLeft; // Determine if the drone will make a U-turn to the left
+    private boolean uTurnLeft; // Determine if the drone will turn to the left
     private Integer flightsToIsland; // The number of flights needed to reach the island
     private State state; // The current state of the drone in this stage
     
@@ -61,10 +61,10 @@ public class FindIsland implements Stage {
                 // Retrieve detection status ("found" key) from the provided JSON
                 echoStatus = info.getString("found");
                 
-                if ("GROUND".equals(echoStatus)) { 
+                if (echoStatus.equals("GROUND")) { 
                     // If ground is detected on the left, turn left
                     state = State.TURN_LEFT;
-                    uTurnLeft = false; // Not performing a U-turn
+                    uTurnLeft = false;
                 } else {
                     // Otherwise, check the right side
                     state = State.ECHO_RIGHT;
@@ -75,10 +75,10 @@ public class FindIsland implements Stage {
                 // Retrieve detection status from JSON
                 echoStatus = info.getString("found");
 
-                if ("GROUND".equals(echoStatus)) {
+                if (echoStatus.equals("GROUND")) {
                     // If ground is detected on the right, turn right
                     state = State.TURN_RIGHT;
-                    uTurnLeft = true; // Mark that a U-turn is needed
+                    uTurnLeft = true; 
                 } else {
                     // If no ground is detected, continue flying
                     state = State.FLY;
