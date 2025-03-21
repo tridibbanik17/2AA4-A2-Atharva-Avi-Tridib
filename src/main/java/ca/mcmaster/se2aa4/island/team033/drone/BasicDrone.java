@@ -62,6 +62,197 @@ public class BasicDrone implements Drone {
         headingDirection = headingDirection.getRight();
     }
 
+    //Make Uturn right
+    @Override
+    public void MakeUTurnRight() {
+        int[][] moves = {
+            {1, 1, -1, 1},  // Move 1: Turn right
+            {1, -1, -1, -1}, // Move 2: Turn left
+            {1, 1, -1, 1},  // Move 3: Turn right
+            {1, 0, -1, 0},  // Move 4: Move forward
+            {1, 1, -1, 1},  // Move 5: Turn right
+            {1, 0, -1, 0}   // Move 6: Move forward
+        };
+
+        Direction[] turnSequence = {
+            headingDirection.getRight(),
+            headingDirection.getLeft(),
+            headingDirection.getRight(),
+            headingDirection.getStraight(),
+            headingDirection.getRight(),
+            headingDirection.getStraight()
+        };
+
+        for (int i = 0; i < moves.length; i++) {
+            if (headingDirection == Direction.WEST) {
+                location.setX(location.getX() + moves[i][0]);
+                location.setY(location.getY() + moves[i][1]);
+            } else if (headingDirection == Direction.EAST) {
+                location.setX(location.getX() + moves[i][2]);
+                location.setY(location.getY() + moves[i][3]);
+            } else if (headingDirection == Direction.NORTH) {
+                location.setX(location.getX() + moves[i][2]);
+                location.setY(location.getY() + moves[i][0]);
+            } else if (headingDirection == Direction.SOUTH) {
+                location.setX(location.getX() + moves[i][0]);
+                location.setY(location.getY() + moves[i][2]);
+            }
+
+            headingDirection = turnSequence[i];
+        }
+    }
+
+
+    // // Turn right
+    // @Override 
+    // public void MakeUTurnRightFirstMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getRight();
+    // }
+
+    // // Turn left
+    // public void MakeUTurnRightSecondMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getLeft();
+    // }
+
+    // // Turn right
+    // public void MakeUTurnRighttThirdMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getRight();
+    // }
+
+    // // Move forward
+    // public void MakeUTurnRightFourthMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getStraight();
+    // }
+
+    // // Turn right
+    // public void MakeUTurnRightFifthMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getRight();
+    // }
+
+    // // Move forward
+    // public void MakeUTurnRightSixthMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getStraight();
+    // }
 
     @Override
     public void turnLeft() {
@@ -75,6 +266,197 @@ public class BasicDrone implements Drone {
         location.setY(location.getY() + deltaY);
 
         headingDirection = headingDirection.getLeft();
+    }
+
+    // Turn left
+    // @Override 
+    // public void MakeUTurnLeftFirstMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getLeft();
+ 
+    // }
+
+    // // Turn right
+    // public void MakeUTurnRightSecondMove() {
+    //    if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getRight();
+    // }
+
+    // // Turn left
+    // public void MakeUTurnRighttThirdMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getLeft();
+    // }
+
+    // // Move forward
+    // public void MakeUTurnRightFourthMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getStraight();
+    // }
+
+    // // Turn left
+    // public void MakeUTurnRightFifthMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getLeft();
+    // }
+
+    // // Move forward
+    // public void MakeUTurnRightSixthMove() {
+    //     if (headingDirection == Direction.WEST) {
+    //         location.setX(location.getX() - 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.EAST) {
+    //         location.setX(location.getX() + 1);
+    //         location.setY(location.getY());
+    //     }
+
+    //     else if (headingDirection == Direction.NORTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() + 1);
+    //     }
+
+    //     else if (headingDirection == Direction.SOUTH) {
+    //         location.setX(location.getX());
+    //         location.setY(location.getY() - 1);
+    //     }
+
+    //     headingDirection = headingDirection.getStraight();
+    // }
+
+    @Override
+    public void MakeUTurnLeft() {
+        int[][] moves = {
+            {-1, -1, 1, 1},  // Move 1: Turn left
+            {-1, 1, 1, -1},  // Move 2: Turn right
+            {-1, -1, 1, 1},  // Move 3: Turn left
+            {-1, 0, 1, 0},   // Move 4: Move forward
+            {-1, -1, 1, 1},  // Move 5: Turn left
+            {-1, 0, 1, 0}    // Move 6: Move forward
+        };
+
+        Direction[] turnSequence = {
+            headingDirection.getLeft(),
+            headingDirection.getRight(),
+            headingDirection.getLeft(),
+            headingDirection.getStraight(),
+            headingDirection.getLeft(),
+            headingDirection.getStraight()
+        };
+
+        for (int i = 0; i < moves.length; i++) {
+            if (headingDirection == Direction.WEST) {
+                location.setX(location.getX() + moves[i][0]);
+                location.setY(location.getY() + moves[i][1]);
+            } else if (headingDirection == Direction.EAST) {
+                location.setX(location.getX() + moves[i][2]);
+                location.setY(location.getY() + moves[i][3]);
+            } else if (headingDirection == Direction.NORTH) {
+                location.setX(location.getX() + moves[i][2]);
+                location.setY(location.getY() + moves[i][0]);
+            } else if (headingDirection == Direction.SOUTH) {
+                location.setX(location.getX() + moves[i][0]);
+                location.setY(location.getY() + moves[i][2]);
+            }
+            
+            headingDirection = turnSequence[i];
+        }
     }
 
 }
