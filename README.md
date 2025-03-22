@@ -23,7 +23,7 @@ This creates one jar file in the `target` directory, named after the team identi
 
 Execution for testing purposes:
 
-```mvn exec:java -q -Dexec.args="./maps/map03.json```
+```mvn exec:java -q -Dexec.args="./maps/map03.json"```
 
 It creates three files in the `outputs` directory:
 
