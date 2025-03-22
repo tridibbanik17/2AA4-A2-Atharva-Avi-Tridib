@@ -6,93 +6,118 @@ import org.json.JSONObject;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-    // ScanLine is a stage where the drone scans the environment to detect if it is off the island.
-    // The drone uses echo and movement commands to gather information about its location.
-    public class ScanLine implements Stage {
+/**
+ * Stage responsible for scanning the environment to detect if the drone is off the island.
+ * Uses echo and movement commands to gather location information.
+ */
+public class ScanLine implements Stage {
 
-    // Different states of the drone in this stage
     private enum State {
-        FLY,
-        SCAN, 
-        ECHO_FRONT // Echo info in front of the drone
+        FLY, SCAN, ECHO_FRONT
     }
 
-    private boolean turnLeft;   // Boolean to determine if the drone will turn left
-    private boolean offIsland;        // Tracks if the drone is off the island
-    private boolean hasMoved;         // Tracks if the drone has moved
-    private boolean moveOutwards;     // Tracks if the drone is moving outwards
-    private State state;              // Current state of the drone in this stage
+    private final boolean turnLeft;
+    private final EnvironmentScanner scanner;
 
     public ScanLine(boolean turnLeft) {
         this.turnLeft = turnLeft;
-        this.offIsland = false;
-        this.hasMoved = false;
-        this.moveOutwards = false;
-        this.state = State.FLY; 
+        this.scanner = new EnvironmentScanner();
     }
 
     @Override
     public String getDroneCommand(Controller controller, Direction dir) {
-        // Command the drone to perform an action based on the current state
-        return switch (state) {
-            case FLY -> controller.flyCommand();
-            case SCAN -> controller.scanCommand();
-            case ECHO_FRONT -> controller.echoCommand(dir);
-            default -> controller.stopCommand();
-        };
+        return scanner.getCommand(controller, dir, scanner.getState());
     }
 
     @Override
     public void processInfo(JSONObject info) {
-        // Process the received information based on the current state
-        switch (state) {
-            case FLY -> state = State.SCAN;  // Transition to scanning after flying
-
-            case SCAN -> {
-                if (isDroneOffLand(info)) {  // Check if the drone is off the island
-                    state = State.ECHO_FRONT;  // Transition to echoing if off land
-                } else {
-                    state = State.FLY;  // Stay flying if still on land
-                    hasMoved = true;  // Mark the drone as having moved
-                }
-            }
-
-            case ECHO_FRONT -> {
-                String echoStatus = info.getString("found");
-                if (echoStatus.equals("OUT_OF_RANGE")) {
-                    offIsland = true;  // If echo status is out of range, the drone has gone off the island
-                    moveOutwards = (info.getInt("range") >= 3); // moveOutwards is true if range is greater of equal to 3 while echo status is out of range
-                } else {
-                    state = State.FLY;  // Mark that the drone is off the island
-                    hasMoved = true;
-                }
-            }
-        }
+        scanner.processSensorData(info);
     }
-    
+
     @Override
     public Stage getNextStage() {
-        // Transition to the next stage (UTurn) once the drone is off the island
-        return new UTurn(turnLeft, moveOutwards);
+        return new UTurn(turnLeft, scanner.shouldMoveOutwards());
     }
 
     @Override
     public boolean isFinished() {
-        // The stage is finished if the drone is off the island
-        return offIsland;
+        return scanner.isOffIsland();
     }
 
     @Override
     public boolean isLastStage() {
-        // This is not the last stage of the process
-        return offIsland && !hasMoved;
+        return scanner.isOffIsland() && !scanner.hasMoved();
     }
 
-    // Return true if drone is off land, false otherwise. 
-    // info is the information received from the drone's sensors.
-    private boolean isDroneOffLand(JSONObject info) {
-        JSONArray biomes = info.getJSONArray("biomes");
-        String currentBiome = biomes.getString(0);
-        return (biomes.length() == 1) && currentBiome.equals("OCEAN");
+    // Inner class for environment scanning logic
+    private static class EnvironmentScanner {
+        private boolean offIsland;
+        private boolean hasMoved;
+        private boolean moveOutwards;
+        private State state;
+
+        public EnvironmentScanner() {
+            this.offIsland = false;
+            this.hasMoved = false;
+            this.moveOutwards = false;
+            this.state = State.FLY;
+        }
+
+        public State getState() {
+            return state;
+        }
+
+        public boolean isOffIsland() {
+            return offIsland;
+        }
+
+        public boolean hasMoved() {
+            return hasMoved;
+        }
+
+        public boolean shouldMoveOutwards() {
+            return moveOutwards;
+        }
+
+        public void processSensorData(JSONObject info) {
+            switch (state) {
+                case FLY -> state = State.SCAN;
+
+                case SCAN -> {
+                    if (isDroneOffLand(info)) {
+                        state = State.ECHO_FRONT;
+                    } else {
+                        state = State.FLY;
+                        hasMoved = true;
+                    }
+                }
+
+                case ECHO_FRONT -> {
+                    String echoStatus = info.getString("found");
+                    if (echoStatus.equals("OUT_OF_RANGE")) {
+                        offIsland = true;
+                        moveOutwards = info.getInt("range") >= 3;
+                    } else {
+                        state = State.FLY;
+                        hasMoved = true;
+                    }
+                }
+            }
+        }
+
+        private boolean isDroneOffLand(JSONObject info) {
+            JSONArray biomes = info.getJSONArray("biomes");
+            String currentBiome = biomes.getString(0);
+            return biomes.length() == 1 && currentBiome.equals("OCEAN");
+        }
+
+        public String getCommand(Controller controller, Direction dir, State state) {
+            return switch (state) {
+                case FLY -> controller.flyCommand();
+                case SCAN -> controller.scanCommand();
+                case ECHO_FRONT -> controller.echoCommand(dir);
+                default -> controller.stopCommand();
+            };
+        }
     }
 }
