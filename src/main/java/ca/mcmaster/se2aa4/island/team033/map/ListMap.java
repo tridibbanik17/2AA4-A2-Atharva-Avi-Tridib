@@ -3,6 +3,7 @@ package ca.mcmaster.se2aa4.island.team033.map;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 
@@ -12,52 +13,53 @@ public class ListMap implements Map {
 
     @Override
     public void addPointOfInterest(PointOfInterest poi) {
-        // Check if the provided PointOfInterest has a valid type
+        validatePointOfInterest(poi);
+        addPointOfInterestByType(poi);
+    }
+
+    private void validatePointOfInterest(PointOfInterest poi) {
         if (poi.getType() == null) {
             throw new IllegalArgumentException("Invalid PointOfInterest type");
-        } else switch (poi.getType()) { // Add the PointOfInterest to the appropriate list
+        }
+    }
+
+    private void addPointOfInterestByType(PointOfInterest poi) {
+        switch (poi.getType()) {
             case CREEK -> creeks.add(poi);
             case EMERGENCY_SITE -> emergencySite = poi;
-            default -> throw new IllegalArgumentException("Invalid PointOfInterest type");
+            default -> throw new IllegalArgumentException("Unsupported PointOfInterest type: " + poi.getType());
         }
     }
 
-    // Returns the ID of the emergency site, or throws an exception if not found
     @Override
     public String getEmergencySiteID() {
-        if (emergencySite == null) {
-            throw new NoSuchElementException("Cannot find emergency site: missing data");
-        }
-        return emergencySite.getId();
+        return Optional.ofNullable(emergencySite)
+                .map(PointOfInterest::getId)
+                .orElseThrow(() -> new NoSuchElementException("No emergency site found"));
     }
 
-    // Finds and returns the ID of the closest creek to the emergency site
     @Override
     public String getClosestCreekID() {
         if (creeks.isEmpty()) {
-            throw new NoSuchElementException("No creeks available");
+            throw new NoSuchElementException("No creeks found");
         }
 
-        Coordinate referenceLocation;
-        if (emergencySite != null) {
-            referenceLocation = emergencySite.getLocation();
-        } else {
-            referenceLocation = new Coordinate(0, 0);
-        }
-        PointOfInterest closestCreek = creeks.get(0);
-        double minDistance = referenceLocation.distanceTo(closestCreek.getLocation());
-        int creekCount = 0;
-        // Iterate through creeks to find the closest one
-        for (PointOfInterest creek : creeks) {
-            double distance = referenceLocation.distanceTo(creek.getLocation());
-            creekCount++;
-            if (distance < minDistance) {
-                minDistance = distance;
-                closestCreek = creek;
-            }
-        }
-        // Uncomment to view the number of creeks discovered.
-        // return closestCreek.getId() + "\nCreek count: " + creekCount;
-        return closestCreek.getId();
+        Coordinate referenceLocation = getReferenceLocation();
+        return findClosestCreek(referenceLocation).getId();
+    }
+
+    private Coordinate getReferenceLocation() {
+        return Optional.ofNullable(emergencySite)
+                .map(PointOfInterest::getLocation)
+                .orElse(new Coordinate(0, 0));
+    }
+
+    private PointOfInterest findClosestCreek(Coordinate referenceLocation) {
+        return creeks.stream()
+                .min((c1, c2) -> Double.compare(
+                        referenceLocation.distanceTo(c1.getLocation()),
+                        referenceLocation.distanceTo(c2.getLocation())
+                ))
+                .orElseThrow(); // This won't happen as we already checked for empty creeks
     }
 }
