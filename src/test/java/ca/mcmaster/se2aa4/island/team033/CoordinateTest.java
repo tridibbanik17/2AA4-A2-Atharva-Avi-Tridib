@@ -8,46 +8,46 @@ import org.junit.jupiter.api.Test;
 import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 
 public class CoordinateTest {
-    private Coordinate coordOne;
-    private Coordinate coordTwo;
-    private Coordinate coordThree;
+    private Coordinate origin;
+    private Coordinate distantPoint;
+    private Coordinate adjacentPoint;
 
     @BeforeEach
     public void setUp() {
-        coordOne = new Coordinate(0, 0);
-        coordTwo = new Coordinate(1, 49);
-        coordThree = new Coordinate(1, 0);
+        origin = new Coordinate(0, 0);
+        distantPoint = new Coordinate(16, -37);
+        adjacentPoint = new Coordinate(1, 0);
     }
 
     @Test
-    public void testDistanceToTrue() {
-        assertEquals(Math.sqrt(2402), coordOne.distanceTo(coordTwo));
+    public void testDistanceBetweenOriginAndDistantPoint() {
+        assertEquals(Math.sqrt(1625), origin.distanceTo(distantPoint));
     }
 
     @Test
-    public void testDistanceToFalse() {
-        assertNotEquals(0, coordOne.distanceTo(coordThree));
+    public void testDistanceBetweenOriginAndAdjacentPoint() {
+        assertNotEquals(0, origin.distanceTo(adjacentPoint));
     }
 
     @Test
-    public void testGetX() {
-        assertEquals(1, coordThree.getX());
+    public void testGetXFromAdjacentPoint() {
+        assertEquals(1, adjacentPoint.getX());
     }
 
     @Test
-    public void testGetY() {
-        assertEquals(49, coordTwo.getY());
+    public void testGetYFromDistantPoint() {
+        assertEquals(-37, distantPoint.getY());
     }
 
     @Test
-    public void testSetX() {
-        coordOne.setX(9);
-        assertEquals(9, coordOne.getX());
+    public void testSetXForOrigin() {
+        origin.setX(27);
+        assertEquals(27, origin.getX());
     }
 
     @Test
-    public void testSetY() {
-        coordOne.setY(197);
-        assertEquals(197, coordOne.getY());
+    public void testSetYForOrigin() {
+        origin.setY(-42);
+        assertEquals(-42, origin.getY());
     }
 }
