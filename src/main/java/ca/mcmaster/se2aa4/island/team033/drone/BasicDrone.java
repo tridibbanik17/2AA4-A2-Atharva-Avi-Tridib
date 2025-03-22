@@ -9,7 +9,7 @@ public class BasicDrone implements Drone {
 
     private Integer batteryLevel; // Current Battery level of the drone
     private Direction headingDirection; // Current heading direction
-    private Coordinate location; // Current location
+    private final Coordinate location; // Current location
 
     public BasicDrone(Integer batteryLevel, Direction headingDirection) {
         this.batteryLevel = batteryLevel;
@@ -18,12 +18,12 @@ public class BasicDrone implements Drone {
     }
 
     @Override
-    public Integer getBatteryLevel() {
+    public int getBatteryLevel() {
         return this.batteryLevel;
     }
 
     @Override
-    public void drainBattery(Integer cost) {
+    public void drainBattery(int cost) {
         this.batteryLevel = this.batteryLevel - cost; // Reduces the battery level by a specified cost depending on the action
     }
 
