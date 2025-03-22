@@ -6,8 +6,8 @@ import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
 // DroneController handles the commands and interacts with the Drone.
 public class DroneController implements Controller {
-    private Drone drone;
-    private String decisionKey = "action";
+    private final Drone drone;
+    private final String decisionKey = "action";
 
     public DroneController(Drone drone) {
         this.drone = drone;
