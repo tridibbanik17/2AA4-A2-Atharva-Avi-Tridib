@@ -44,4 +44,14 @@ public class MoveToCornerTest {
         Stage correctPhase = new FindIsland();
         assertEquals(correctPhase.getClass(), nextPhase.getClass());
     }
+
+    @Test
+    public void testFinished() {
+        assertEquals(false, stage.isFinished());
+    }
+
+    @Test
+    public void testLastPhase() {
+        assertEquals(false, stage.isLastPhase());
+    }
 }
