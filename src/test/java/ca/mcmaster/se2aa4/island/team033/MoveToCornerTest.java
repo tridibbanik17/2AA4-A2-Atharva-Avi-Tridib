@@ -1,19 +1,17 @@
 package ca.mcmaster.se2aa4.island.team033;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.drone.Drone;
 import ca.mcmaster.se2aa4.island.team033.drone.DroneController;
-import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
+import ca.mcmaster.se2aa4.island.team033.position.Direction;
 import ca.mcmaster.se2aa4.island.team033.stage.FindIsland;
 import ca.mcmaster.se2aa4.island.team033.stage.MoveToCorner;
 import ca.mcmaster.se2aa4.island.team033.stage.Stage;
-import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
 public class MoveToCornerTest {
     private Drone drone;
@@ -52,6 +50,6 @@ public class MoveToCornerTest {
 
     @Test
     public void testLastPhase() {
-        assertEquals(false, stage.isLastPhase());
+        assertEquals(false, stage.isLastStage());
     }
 }
