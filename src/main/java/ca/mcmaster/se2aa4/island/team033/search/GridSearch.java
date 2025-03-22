@@ -15,16 +15,17 @@ import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 import ca.mcmaster.se2aa4.island.team033.stage.MoveToCorner;
 import ca.mcmaster.se2aa4.island.team033.stage.Stage;
 
-// The GridSearch class implements the Search interface and defines the grid-based search strategy for the drone.
-// It includes logic for drone movement and processing the response to add points of interest to the map.
+/**
+ * Implements a grid-based search strategy for the drone, including movement logic and response processing.
+ */
 public class GridSearch implements Search {
 
-    // Logger to log important information and actions during the grid search
-    private final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(GridSearch.class);
+    private static final int MIN_BATTERY_LEVEL = 50;
 
-    private Drone drone;     // Drone object that performs the search
-    private Controller controller;     // Controller that sends commands to the drone
-    private Stage stage;    // The current stage the drone is in during the search
+    private final Drone drone;
+    private final Controller controller;
+    private Stage stage;
 
     public GridSearch(Drone drone) {
         this.drone = drone;
@@ -32,57 +33,75 @@ public class GridSearch implements Search {
         this.stage = new MoveToCorner();
     }
 
-    // The drone follows a series of stages and performs actions such as moving and stopping.
-    // The search is stopped if the battery level falls below 50% or if the last stage is reached.
     @Override
     public String performSearch() {
-        String command;
-
-        // If the stage is the last stage or battery level is below 50%, stop the drone
-        if (stage.isLastStage() || drone.getBatteryLevel() < 50) {
-            command = controller.stopCommand();
-        } else {
-            // If the current stage is not finished, get the next command for that stage
-            if (!stage.isFinished()) {
-                command = stage.getDroneCommand(controller, drone.getHeading());
-            } else {
-                // If the stage is finished, move to the next stage and get the command for it
-                stage = stage.getNextStage();
-                command = stage.getDroneCommand(controller, drone.getHeading());
-            }
+        if (shouldStopSearch()) {
+            return controller.stopCommand();
         }
+
+        String command = stage.isFinished() ? getNextStageCommand() : getCurrentStageCommand();
         return command;
     }
 
-    // Process response from drone after performing a search.
-    // Response contains cost, battery usage, poi
     @Override
     public void readResponse(JSONObject response, Map map) {
-        Integer cost = response.getInt("cost");
+        updateBatteryLevel(response);
+        logDronePosition();
+        processExtraInfo(response, map);
+    }
+
+    private boolean shouldStopSearch() {
+        return stage.isLastStage() || drone.getBatteryLevel() < MIN_BATTERY_LEVEL;
+    }
+
+    private String getCurrentStageCommand() {
+        return stage.getDroneCommand(controller, drone.getHeading());
+    }
+
+    private String getNextStageCommand() {
+        stage = stage.getNextStage();
+        return stage.getDroneCommand(controller, drone.getHeading());
+    }
+
+    private void updateBatteryLevel(JSONObject response) {
+        int cost = response.getInt("cost");
         drone.drainBattery(cost);
         logger.info("Budget Remaining: {}", drone.getBatteryLevel());
+    }
 
+    private void logDronePosition() {
         Coordinate droneLoc = drone.getLocation();
         logger.info("Drone Position: ({}, {})", droneLoc.getX(), droneLoc.getY());
+    }
 
+    private void processExtraInfo(JSONObject response, Map map) {
         JSONObject extraInfo = response.getJSONObject("extras");
         stage.processInfo(extraInfo);
+        processCreeks(extraInfo, map);
+        processSites(extraInfo, map);
+    }
 
+    private void processCreeks(JSONObject extraInfo, Map map) {
         if (extraInfo.has("creeks")) {
             JSONArray creeksArray = extraInfo.getJSONArray("creeks");
             if (!creeksArray.isEmpty()) {
                 for (int i = 0; i < creeksArray.length(); i++) {
-                    map.addPointOfInterest(new PointOfInterest(creeksArray.getString(i), PointOfInterestType.CREEK, drone.getLocation()));
+                    addPointOfInterest(map, creeksArray.getString(i), PointOfInterestType.CREEK);
                 }
             }
         }
+    }
 
+    private void processSites(JSONObject extraInfo, Map map) {
         if (extraInfo.has("sites")) {
             JSONArray sitesArray = extraInfo.getJSONArray("sites");
             if (!sitesArray.isEmpty()) {
-                map.addPointOfInterest(new PointOfInterest(sitesArray.getString(0), PointOfInterestType.EMERGENCY_SITE, drone.getLocation()));
+                addPointOfInterest(map, sitesArray.getString(0), PointOfInterestType.EMERGENCY_SITE);
             }
         }
+    }
 
+    private void addPointOfInterest(Map map, String name, PointOfInterestType type) {
+        map.addPointOfInterest(new PointOfInterest(name, type, drone.getLocation()));
     }
 }
