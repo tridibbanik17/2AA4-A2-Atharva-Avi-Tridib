@@ -1,10 +1,24 @@
 package ca.mcmaster.se2aa4.island.team033.position;
 
-// Enum representing the four cardinal directions
-public enum Direction {
-    NORTH("N"), EAST("E"), SOUTH("S"), WEST("W");
+import java.util.HashMap;
+import java.util.Map;
 
-    private String symbol;
+// Enum representing the four cardinal directions (Value Object pattern)
+public enum Direction {
+    NORTH("N"),
+    EAST("E"),
+    SOUTH("S"),
+    WEST("W");
+
+    private static final Map<String, Direction> SYMBOL_MAP = new HashMap<>();
+
+    static {
+        for (Direction dir : values()) {
+            SYMBOL_MAP.put(dir.symbol, dir);
+        }
+    }
+
+    private final String symbol;
 
     // Constructor to associate the direction with its symbol
     Direction(String symbol) {
@@ -25,13 +39,12 @@ public enum Direction {
         return values()[(ordinal() - 1 + values().length) % values().length];
     }
 
-    // Retrieve a Direction enum from its symbol
-    public static Direction fromSymbol(String s) {
-        for (Direction dir : values()) {
-            if (dir.symbol.equals(s)) {
-                return dir;
-            }
+    // Factory method to retrieve a Direction enum from its symbol (Factory Method pattern)
+    public static Direction fromSymbol(String symbol) {
+        Direction dir = SYMBOL_MAP.get(symbol);
+        if (dir == null) {
+            throw new IllegalArgumentException("Invalid direction symbol: " + symbol);
         }
-        throw new IllegalArgumentException("Invalid direction symbol: " + s);
+        return dir;
     }
 }
