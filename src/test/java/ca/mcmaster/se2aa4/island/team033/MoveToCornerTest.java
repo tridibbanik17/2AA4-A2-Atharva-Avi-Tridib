@@ -37,4 +37,11 @@ public class MoveToCornerTest {
     public void testEchoLeftState() {
         assertEquals(echoLeft, stage.getDroneCommand(controller, drone.getHeading()));
     }
+
+    @Test
+    public void testNextPhase() {
+        Stage nextPhase = stage.getNextStage();
+        Stage correctPhase = new FindIsland();
+        assertEquals(correctPhase.getClass(), nextPhase.getClass());
+    }
 }
