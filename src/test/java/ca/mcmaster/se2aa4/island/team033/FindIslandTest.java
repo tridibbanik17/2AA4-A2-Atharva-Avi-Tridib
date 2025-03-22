@@ -37,4 +37,36 @@ public class FindIslandTest {
     public void testStateFly() {
         assertEquals(fly, p1.getDroneCommand(controller, drone.getHeading()));
     }
+
+    @Test
+    public void testEchoLeft() {
+        p1.getDroneCommand(controller, drone.getHeading());
+        p1.processInfo(null);
+        
+        assertEquals(echoLeft, p1.getDroneCommand(controller, drone.getHeading()));
+    }
+
+    @Test
+    public void testNextPhase() {
+        Stage nextPhase = p1.getNextStage();
+        Stage correctPhase = new ScanLine(true);
+        assertEquals(correctPhase.getClass(), nextPhase.getClass());
+    }
+
+    @Test
+    public void testFinished() {
+        assertEquals(false, p1.isFinished());
+    }
+
+    @Test
+    public void testLastPhase() {
+        assertEquals(false, p1.isLastStage());
+    }
+
+    private JSONObject echoResponse(int range, String found) {
+        JSONObject response = new JSONObject();
+        response.put("range", range);
+        response.put("found",found);
+        return response;
+    }
 }
