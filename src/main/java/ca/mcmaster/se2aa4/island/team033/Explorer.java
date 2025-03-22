@@ -21,8 +21,8 @@ import eu.ace_design.island.bot.IExplorerRaid;
 public class Explorer implements IExplorerRaid {
 
     private final Logger logger = LogManager.getLogger();
-    private Search gridSearch;
     private Map map;
+    private Search gridSearch;
     private Report report;
 
     @Override
@@ -30,6 +30,7 @@ public class Explorer implements IExplorerRaid {
         logger.info("** Initializing the Exploration Command Center");
         JSONObject info = new JSONObject(new JSONTokener(new StringReader(s)));
         logger.info("** Initialization info:\n {}",info.toString(2));
+
         String direction = info.getString("heading");
         Integer batteryLevel = info.getInt("budget");
 
@@ -40,13 +41,14 @@ public class Explorer implements IExplorerRaid {
 
         logger.info("The drone is facing {}", direction);
         logger.info("Battery level is {}", batteryLevel);
+        logger.info("----------------------------Initialization Ends Here------------------------------------\n");
     }
 
     @Override
     public String takeDecision() {
-        String command = gridSearch.performSearch();
-        logger.info("Command: {}", command);
-        return command;
+        String decision = gridSearch.performSearch();
+        logger.info("Decision: {}", decision);
+        return decision;
     }
 
     @Override
@@ -58,8 +60,8 @@ public class Explorer implements IExplorerRaid {
 
     @Override
     public String deliverFinalReport() {
-        String finalReport = report.generateReport(map);
-        logger.info(finalReport);
-        return finalReport;
+        String missionReport = report.generateReport(map);
+        logger.info(missionReport);
+        return missionReport;
     }
 }
