@@ -4,10 +4,21 @@ import org.json.JSONObject;
 
 import ca.mcmaster.se2aa4.island.team033.map.Map;
 
-// The Search interface defines the common behavior for different types of search strategies.
+/**
+ * The Search interface defines the common behavior for different types of search strategies.
+ */
 public interface Search {
-    // Method to perform a search action. The implementation will vary depending on the specific search strategy.
+    /**
+     * Performs a search action. The implementation varies based on the specific search strategy.
+     * @return The command to execute the search.
+     */
     String performSearch();
-    // Method to process the response after performing a search. This method will update the map with new information received.
+
+    /**
+     * Processes the response after performing a search and updates the map with new information.
+     * @param response The JSON response from the search operation.
+     * @param map The map to update with new points of interest.
+     */
     void readResponse(JSONObject response, Map map);
-} 
+}
+
