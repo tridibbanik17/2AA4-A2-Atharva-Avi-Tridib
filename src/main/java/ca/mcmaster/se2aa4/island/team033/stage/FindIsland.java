@@ -5,122 +5,132 @@ import org.json.JSONObject;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-// Search for the island by flying and echoing signals.
-// Attempt to locate the island and proceed to the next stage once it is found.
-
+/**
+ * Stage responsible for locating the island by flying and echoing signals.
+ * Transitions to the next stage once the island is found.
+ */
 public class FindIsland implements Stage {
 
-    // Different states of the drone in this stage
     private enum State {
-        FLY,
-        ECHO_LEFT,
-        ECHO_RIGHT,
-        TURN_LEFT,
-        TURN_RIGHT,
-        REMAINING_FLIGHT_DISTANCE,
-        FLY_TOWARDS_ISLAND
+        FLY, ECHO_LEFT, ECHO_RIGHT, TURN_LEFT, TURN_RIGHT, REMAINING_FLIGHT_DISTANCE, FLY_TOWARDS_ISLAND
     }
 
-    private boolean atIsland; // Track if the drone has reached the island
-    private boolean uTurnLeft; // Determine if the drone will turn to the left
-    private Integer flightsToIsland; // The number of flights needed to reach the island
-    private State state; // The current state of the drone in this stage
-    
+    private final IslandLocator islandLocator;
+    private final FlightNavigator flightNavigator;
+
     public FindIsland() {
-        this.atIsland = false;
-        this.uTurnLeft = false;
-        this.flightsToIsland = 0;
-        this.state = State.FLY;
+        this.islandLocator = new IslandLocator();
+        this.flightNavigator = new FlightNavigator();
     }
 
     @Override
     public String getDroneCommand(Controller controller, Direction dir) {
-        // Determine the drone's command based on the current state
-        return switch (state) {
-            case State.FLY -> controller.flyCommand();
-            case State.ECHO_LEFT -> controller.echoCommand(dir.getLeft());
-            case State.ECHO_RIGHT -> controller.echoCommand(dir.getRight());
-            case State.TURN_LEFT -> controller.headingCommand(dir.getLeft());
-            case State.TURN_RIGHT -> controller.headingCommand(dir.getRight());
-            case State.REMAINING_FLIGHT_DISTANCE -> controller.echoCommand(dir);
-            case State.FLY_TOWARDS_ISLAND -> controller.flyCommand();
-            default -> controller.stopCommand();
-        };
+        return flightNavigator.getCommand(controller, dir, islandLocator.getState());
     }
 
     @Override
     public void processInfo(JSONObject info) {
-        // Process the information based on the current state
-        String echoStatus;
-
-        switch (state) {
-            case State.FLY -> // Initial state: transition to left-side echo detection
-                state = State.ECHO_LEFT;
-            
-            case State.ECHO_LEFT -> {
-                // Retrieve detection status ("found" key) from the provided JSON
-                echoStatus = info.getString("found");
-                
-                if (echoStatus.equals("GROUND")) { 
-                    // If ground is detected on the left, turn left
-                    state = State.TURN_LEFT;
-                    uTurnLeft = false;
-                } else {
-                    // Otherwise, check the right side
-                    state = State.ECHO_RIGHT;
-                }
-            }
-
-            case State.ECHO_RIGHT -> {
-                // Retrieve detection status from JSON
-                echoStatus = info.getString("found");
-
-                if (echoStatus.equals("GROUND")) {
-                    // If ground is detected on the right, turn right
-                    state = State.TURN_RIGHT;
-                    uTurnLeft = true; 
-                } else {
-                    // If no ground is detected, continue flying
-                    state = State.FLY;
-                }
-            }
-
-            case State.TURN_LEFT, State.TURN_RIGHT -> // After turning, proceed to measure distance
-                state = State.REMAINING_FLIGHT_DISTANCE;
-            case State.REMAINING_FLIGHT_DISTANCE -> {
-                // Retrieve the flight range from the JSON and set the next phase
-                flightsToIsland = info.getInt("range");
-                state = State.FLY_TOWARDS_ISLAND;
-            }
-
-            case State.FLY_TOWARDS_ISLAND -> {
-                // Simulate the flight progress by decrementing the distance counter
-                flightsToIsland -= 1;
-                if (flightsToIsland <= 0) {
-                    // Mark arrival at the island
-                    atIsland = true;
-                }
-            }
-
-            default -> throw new IllegalStateException("Unexpected state: " + state);
-        }
+        islandLocator.processSensorData(info);
     }
 
     @Override
     public Stage getNextStage() {
-        // Transition to the next stage (ScanLine)
-        return new ScanLine(uTurnLeft);
+        return new ScanLine(islandLocator.shouldTurnLeft());
     }
 
     @Override
     public boolean isFinished() {
-        // Check if the stage is finished (if the drone has reached the island)
-        return atIsland;
+        return islandLocator.hasReachedIsland();
     }
 
     @Override
     public boolean isLastStage() {
-        // This is not the last stage in the process
         return false;
+    }
+
+    // Inner classes for better organization and SRP adherence
+    private static class IslandLocator {
+        private boolean atIsland;
+        private boolean uTurnLeft;
+        private int flightsToIsland;
+        private State state;
+
+        public IslandLocator() {
+            this.atIsland = false;
+            this.uTurnLeft = false;
+            this.flightsToIsland = 0;
+            this.state = State.FLY;
+        }
+
+        public State getState() {
+            return state;
+        }
+
+        public boolean shouldTurnLeft() {
+            return uTurnLeft;
+        }
+
+        public boolean hasReachedIsland() {
+            return atIsland;
+        }
+
+        public void processSensorData(JSONObject info) {
+            String echoStatus;
+
+            switch (state) {
+                case FLY -> state = State.ECHO_LEFT;
+
+                case ECHO_LEFT -> {
+                    echoStatus = info.getString("found");
+                    if (echoStatus.equals("GROUND")) {
+                        state = State.TURN_LEFT;
+                        uTurnLeft = false;
+                    } else {
+                        state = State.ECHO_RIGHT;
+                    }
+                }
+
+                case ECHO_RIGHT -> {
+                    echoStatus = info.getString("found");
+                    if (echoStatus.equals("GROUND")) {
+                        state = State.TURN_RIGHT;
+                        uTurnLeft = true;
+                    } else {
+                        state = State.FLY;
+                    }
+                }
+
+                case TURN_LEFT, TURN_RIGHT -> state = State.REMAINING_FLIGHT_DISTANCE;
+
+                case REMAINING_FLIGHT_DISTANCE -> {
+                    flightsToIsland = info.getInt("range");
+                    state = State.FLY_TOWARDS_ISLAND;
+                }
+
+                case FLY_TOWARDS_ISLAND -> {
+                    flightsToIsland--;
+                    if (flightsToIsland <= 0) {
+                        atIsland = true;
+                    }
+                }
+
+                default -> throw new IllegalStateException("Unexpected state: " + state);
+            }
+        }
+    }
+
+    private static class FlightNavigator {
+        public String getCommand(Controller controller, Direction dir, State state) {
+            return switch (state) {
+                case FLY -> controller.flyCommand();
+                case ECHO_LEFT -> controller.echoCommand(dir.getLeft());
+                case ECHO_RIGHT -> controller.echoCommand(dir.getRight());
+                case TURN_LEFT -> controller.headingCommand(dir.getLeft());
+                case TURN_RIGHT -> controller.headingCommand(dir.getRight());
+                case REMAINING_FLIGHT_DISTANCE -> controller.echoCommand(dir);
+                case FLY_TOWARDS_ISLAND -> controller.flyCommand();
+                default -> controller.stopCommand();
+            };
+        }
     }
 }
