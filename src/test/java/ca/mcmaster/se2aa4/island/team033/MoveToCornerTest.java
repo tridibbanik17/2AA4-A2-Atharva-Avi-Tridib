@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import org.json.JSONObject;
+
 import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.drone.Drone;
@@ -51,5 +53,12 @@ public class MoveToCornerTest {
     @Test
     public void testLastPhase() {
         assertEquals(false, stage.isLastStage());
+    }
+
+    private JSONObject echoResponse(int range) {
+        JSONObject response = new JSONObject();
+        response.put("range", range);
+        response.put("found","OUT_OF_RANGE");
+        return response;
     }
 }
