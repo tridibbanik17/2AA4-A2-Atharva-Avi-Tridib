@@ -10,13 +10,13 @@ import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
 public class BasicDroneTest {
-    private final Integer battery = 10000;
+    private final Integer battery = 7000;
     private final Integer cost = 5;
     private final Direction dir = Direction.EAST;
-    private final Coordinate coord = new Coordinate(0, 0);
-    private final Coordinate coord1 = new Coordinate(1, 0);
-    private final Coordinate coord2 = new Coordinate(1, -1);
-    private final Coordinate coord3 = new Coordinate(1, 1);
+    private final Coordinate baseCoord = new Coordinate(0, 0);
+    private final Coordinate flyCoord = new Coordinate(1, 0);
+    private final Coordinate rightCoord = new Coordinate(1, -1);
+    private final Coordinate leftCoord = new Coordinate(1, 1);
     private Drone drone;
 
     @BeforeEach
@@ -43,8 +43,8 @@ public class BasicDroneTest {
     @Test
     public void testGetLocation() {
         Coordinate droneCoord = drone.getLocation();
-        assertEquals(droneCoord.getX(), coord.getX());
-        assertEquals(droneCoord.getY(), coord.getY());
+        assertEquals(droneCoord.getX(), baseCoord.getX());
+        assertEquals(droneCoord.getY(), baseCoord.getY());
     }
 
     @Test
@@ -52,8 +52,8 @@ public class BasicDroneTest {
         drone.moveForward();
         assertEquals(dir, drone.getHeading());
         Coordinate droneCoord = drone.getLocation();
-        assertEquals(coord1.getX(), droneCoord.getX());
-        assertEquals(coord1.getY(), droneCoord.getY());
+        assertEquals(flyCoord.getX(), droneCoord.getX());
+        assertEquals(flyCoord.getY(), droneCoord.getY());
     }
 
     @Test
@@ -61,8 +61,8 @@ public class BasicDroneTest {
         drone.turnRight();
         assertEquals(Direction.SOUTH, drone.getHeading());
         Coordinate droneCoord = drone.getLocation();
-        assertEquals(droneCoord.getX(), coord2.getX());
-        assertEquals(droneCoord.getY(), coord2.getY());
+        assertEquals(droneCoord.getX(), rightCoord.getX());
+        assertEquals(droneCoord.getY(), rightCoord.getY());
     }
 
     @Test
@@ -70,6 +70,7 @@ public class BasicDroneTest {
         drone.turnLeft();
         assertEquals(Direction.NORTH, drone.getHeading());
         Coordinate droneCoord = drone.getLocation();
-        assertEquals(droneCoord.getX(), coord3.getY());
+        assertEquals(droneCoord.getX(), leftCoord.getX());
+        assertEquals(droneCoord.getY(), leftCoord.getY());
     }
 }
