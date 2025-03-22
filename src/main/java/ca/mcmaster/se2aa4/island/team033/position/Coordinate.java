@@ -27,6 +27,9 @@ public class Coordinate {
 
     // Calculates the Euclidean distance between this coordinate and another
     public double distanceTo(Coordinate other) {
+        if (other == null) {
+            throw new IllegalArgumentException("Coordinate cannot be null");
+        }
         return Math.sqrt(Math.pow((double)other.getX() - this.x, 2) + Math.pow((double)other.getY() - this.y, 2));
     }
 }
