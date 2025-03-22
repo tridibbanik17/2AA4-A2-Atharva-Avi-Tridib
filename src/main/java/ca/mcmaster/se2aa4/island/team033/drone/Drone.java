@@ -13,6 +13,4 @@ public interface Drone {
     void moveForward(); // Move forward by one unit in current direction
     void turnRight(); // Turn right and adjust direction
     void turnLeft(); // Turn left and adjust direction
-    void MakeUTurnRight();
-    void MakeUTurnLeft();  
 }
