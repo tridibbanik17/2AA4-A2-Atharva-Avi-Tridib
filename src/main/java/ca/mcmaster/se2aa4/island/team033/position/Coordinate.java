@@ -1,20 +1,21 @@
 package ca.mcmaster.se2aa4.island.team033.position;
 
+// Represents a 2D coordinate with mutable x and y values.
 public class Coordinate {
-    private int x; // X-coordinate
-    private int y; // Y-coordinate
+    private int x; // X-coordinate.
+    private int y; // Y-coordinate.
 
     public Coordinate(int x, int y) {
-        this.x = x; 
-        this.y = y; 
+        this.x = x;
+        this.y = y;
     }
 
     public int getX() {
-        return this.x;
+        return x;
     }
 
     public int getY() {
-        return this.y;
+        return y;
     }
 
     public void setX(int x) {
@@ -25,11 +26,13 @@ public class Coordinate {
         this.y = y;
     }
 
-    // Calculates the Euclidean distance between this coordinate and another
+    // Calculates the Euclidean distance to another coordinate.
     public double distanceTo(Coordinate other) {
         if (other == null) {
             throw new IllegalArgumentException("Coordinate cannot be null");
         }
-        return Math.sqrt(Math.pow((double)other.getX() - this.x, 2) + Math.pow((double)other.getY() - this.y, 2));
+        int dx = other.x - this.x;
+        int dy = other.y - this.y;
+        return Math.sqrt(dx * dx + dy * dy);
     }
 }
