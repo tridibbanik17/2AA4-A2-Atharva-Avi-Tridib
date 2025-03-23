@@ -49,5 +49,25 @@ public class ScanLineTest {
         Stage nextStage = stage.getNextStage();
         Stage correctStage = new UTurn(true, true);
         assertEquals(correctStage.getClass(), nextStage.getClass());
-    }    
+    }
+
+    @Test
+    public void testFinished() {
+        assertEquals(false, stage.isFinished());
+    }
+
+    @Test
+    public void testLastStage() {
+        assertEquals(false, stage.isLastStage());
+    }
+
+    private JSONObject scanResponse() {
+        JSONObject response = new JSONObject();
+        JSONArray biomes = new JSONArray(1);
+        biomes.put("OCEAN");
+        response.put("biomes", biomes);
+        response.put("creeks", new JSONArray());
+        response.put("sites", new JSONArray());
+        return response;
+    }
 }
