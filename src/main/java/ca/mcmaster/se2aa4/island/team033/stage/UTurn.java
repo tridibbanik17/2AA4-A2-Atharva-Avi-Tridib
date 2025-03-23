@@ -5,10 +5,7 @@ import org.json.JSONObject;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-/**
- * Stage responsible for performing a U-turn to return to the drone's path.
- * The drone may turn left or right based on initial parameters.
- */
+// Stage to perform a U-turn based on initial parameters.
 public class UTurn implements Stage {
 
     private static final int MAX_TURNS = 4;
@@ -26,7 +23,7 @@ public class UTurn implements Stage {
 
     @Override
     public void processInfo(JSONObject info) {
-        // No processing needed; U-turn logic is fixed.
+        // No processing needed for U-turn.
     }
 
     @Override
@@ -44,7 +41,7 @@ public class UTurn implements Stage {
         return false;
     }
 
-    // Inner class for U-turn execution logic
+    // Handles U-turn execution logic.
     private static class TurnExecutor {
         private final boolean turnLeft;
         private final int flyDistance;
@@ -72,6 +69,7 @@ public class UTurn implements Stage {
             return hasTurned;
         }
 
+        // Returns the command based on the current turn state.
         public String getCommand(Controller controller, Direction dir) {
             String command;
             if (turnCount == turnOpposite) {
@@ -90,6 +88,7 @@ public class UTurn implements Stage {
             return command;
         }
 
+        // Generates a turn command based on direction.
         private String generateTurnCommand(Controller controller, boolean dirLeft, Direction direction) {
             direction = dirLeft ? direction.getLeft() : direction.getRight();
             return controller.headingCommand(direction);
