@@ -1,69 +1,83 @@
 package ca.mcmaster.se2aa4.island.team033;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.drone.Drone;
 import ca.mcmaster.se2aa4.island.team033.drone.DroneController;
-import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
-import ca.mcmaster.se2aa4.island.team033.stage.Stage;
-import ca.mcmaster.se2aa4.island.team033.stage.ScanLine;
-import ca.mcmaster.se2aa4.island.team033.stage.UTurn;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
+import ca.mcmaster.se2aa4.island.team033.stage.ScanLine;
+import ca.mcmaster.se2aa4.island.team033.stage.Stage;
+import ca.mcmaster.se2aa4.island.team033.stage.UTurn;
 
 public class ScanLineTest {
     private Drone drone;
     private Controller controller;
     private Stage stage;
-    private final String echo = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"E\"}}";
+    private final String echoNorth = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"N\"}}";
     private final String scan = "{\"action\":\"scan\"}";
     private final String fly = "{\"action\":\"fly\"}";
 
     @BeforeEach
-    public void setUp() {
-        this.drone = new BasicDrone(7000, Direction.EAST);
-        this.controller = new DroneController(drone);
-        this.stage = new ScanLine(true);
+    @SuppressWarnings("unused")
+    void setUp() {
+        drone = new BasicDrone(7000, Direction.NORTH);
+        controller = new DroneController(drone);
+        stage = new ScanLine(true);
     }
 
     @Test
-    public void testFly() {
-        assertEquals(fly, stage.getDroneCommand(controller, drone.getHeading()));
+    void testInitialFlyCommand() {
+        String droneCommand = stage.getDroneCommand(controller, drone.getHeading());
+        assertEquals(fly, droneCommand);
     }
 
     @Test
-    public void testScan() {
+    void testScanAfterFly() {
         stage.getDroneCommand(controller, drone.getHeading());
-        stage.processInfo(null);
-        assertEquals(scan, stage.getDroneCommand(controller, drone.getHeading()));
+        stage.processInfo(null); 
+        String droneCommand = stage.getDroneCommand(controller, drone.getHeading());
+        assertEquals(scan, droneCommand);
     }
 
     @Test
-    public void testNextStage() {
+    void testEchoAfterScan() {
+        stage.getDroneCommand(controller, drone.getHeading());
+        stage.processInfo(null); 
+        stage.getDroneCommand(controller, drone.getHeading()); 
+        stage.processInfo(scanResponse()); 
+        String droneCommand = stage.getDroneCommand(controller, drone.getHeading());
+        assertEquals(echoNorth, droneCommand);
+    }
+
+    @Test
+    void testNextStage() {
         Stage nextStage = stage.getNextStage();
         Stage correctStage = new UTurn(true, true);
         assertEquals(correctStage.getClass(), nextStage.getClass());
     }
 
     @Test
-    public void testFinished() {
-        assertEquals(false, stage.isFinished());
+    void testIsNotFinished() {
+        assertFalse(stage.isFinished());
     }
 
     @Test
-    public void testLastStage() {
-        assertEquals(false, stage.isLastStage());
+    void testIsNotLastStage() {
+        assertFalse(stage.isLastStage());
     }
 
+    // Simulates a scan response indicating the drone is off the island.
     private JSONObject scanResponse() {
         JSONObject response = new JSONObject();
-        JSONArray biomes = new JSONArray(1);
-        biomes.put("OCEAN");
+        JSONArray biomes = new JSONArray();
+        biomes.put("OCEAN"); // Indicates the drone is over the ocean.
         response.put("biomes", biomes);
         response.put("creeks", new JSONArray());
         response.put("sites", new JSONArray());
