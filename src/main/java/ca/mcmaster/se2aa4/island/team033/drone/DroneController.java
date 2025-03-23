@@ -4,10 +4,10 @@ import org.json.JSONObject;
 
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-// DroneController handles the commands and interacts with the Drone.
+// Handles commands and interacts with the drone, returning JSON responses.
 public class DroneController implements Controller {
-    private final Drone drone;
-    private final String decisionKey = "action";
+    private final Drone drone; // Reference to the controlled drone.
+    private static final String DECISION_KEY = "action"; // Key for action in JSON response.
 
     public DroneController(Drone drone) {
         this.drone = drone;
@@ -15,59 +15,55 @@ public class DroneController implements Controller {
 
     @Override
     public String flyCommand() {
-        // Prepare a JSON response for the "fly" action
-        JSONObject decision = new JSONObject();
-        decision.put(decisionKey, "fly");
+        // Executes fly command, moves drone forward, and returns JSON response.
+        JSONObject response = new JSONObject();
+        response.put(DECISION_KEY, "fly");
         drone.moveForward();
-        return decision.toString();
+        return response.toString();
     }
 
     @Override
     public String headingCommand(Direction dir) {
-        // Prepare a JSON response for the "heading" action
-        JSONObject decision = new JSONObject();
+        // Executes heading change command, updates drone direction, and returns JSON response.
+        JSONObject response = new JSONObject();
         JSONObject params = new JSONObject();
-
-        decision.put(decisionKey, "heading");
+        response.put(DECISION_KEY, "heading");
         params.put("direction", dir.getSymbol());
-        decision.put("parameters", params);
+        response.put("parameters", params);
 
-        // Update drone direction based on the input
         if (dir.equals(drone.getHeading().getRight())) {
             drone.turnRight();
         } else if (dir.equals(drone.getHeading().getLeft())) {
             drone.turnLeft();
         }
 
-        return decision.toString();
+        return response.toString();
     }
 
     @Override
     public String echoCommand(Direction dir) {
-        // Prepare a JSON response for the "echo" action
-        JSONObject decision = new JSONObject();
+        // Executes echo command and returns JSON response with direction.
+        JSONObject response = new JSONObject();
         JSONObject params = new JSONObject();
-
-        decision.put(decisionKey, "echo");
+        response.put(DECISION_KEY, "echo");
         params.put("direction", dir.getSymbol());
-        decision.put("parameters", params);
-
-        return decision.toString();
+        response.put("parameters", params);
+        return response.toString();
     }
 
     @Override
     public String scanCommand() {
-        // Prepare a JSON response for the "scan" action
-        JSONObject decision = new JSONObject();
-        decision.put(decisionKey, "scan");
-        return decision.toString();
+        // Executes scan command and returns JSON response.
+        JSONObject response = new JSONObject();
+        response.put(DECISION_KEY, "scan");
+        return response.toString();
     }
 
     @Override
     public String stopCommand() {
-        // Prepare a JSON response for the "stop" action
-        JSONObject decision = new JSONObject();
-        decision.put(decisionKey, "stop");
-        return decision.toString();
+        // Executes stop command and returns JSON response.
+        JSONObject response = new JSONObject();
+        response.put(DECISION_KEY, "stop");
+        return response.toString();
     }
 }
