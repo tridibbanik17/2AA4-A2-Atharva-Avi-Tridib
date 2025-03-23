@@ -23,17 +23,17 @@ public class NavigationReportTest {
 
     @Test
     public void testGenerateReport() {
-        map.addPointOfInterest(new PointOfInterest("creek", PointOfInterestType.CREEK, new Coordinate(0, 0)));
         map.addPointOfInterest(new PointOfInterest("site", PointOfInterestType.EMERGENCY_SITE, new Coordinate(0, 0)));
+        map.addPointOfInterest(new PointOfInterest("creek", PointOfInterestType.CREEK, new Coordinate(0, 0)));
         report = new NavigationReport();
         String result = "Emergency Site ID: site\nClosest Creek ID: creek\n";
-        assertEquals(report.generateReport(map), result); 
+        assertEquals(result, report.generateReport(map)); 
     }
 
     @Test
     public void testGenerateReportNull() {
         report = new NavigationReport();
         String result = "Emergency Site ID: Could not locate emergency site.\nClosest Creek ID: Could not locate creek.\n";
-        assertEquals(report.generateReport(map), result); 
+        assertEquals(result, report.generateReport(map)); 
     }
 }
