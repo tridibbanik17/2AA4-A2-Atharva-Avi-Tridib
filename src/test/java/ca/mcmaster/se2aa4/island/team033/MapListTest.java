@@ -11,17 +11,22 @@ import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 
 public class MapListTest {
     private ListMap map;
-    private PointOfInterest creek1, creek2, creek3, creek4, creek5, site;
+    private PointOfInterest creek1, creek2, creek3, creek4, creek5, creek6, creek7, creek8, creek9, creek10, site;
 
     @BeforeEach
     public void setup() {
         map = new ListMap();
-        creek1 = new PointOfInterest("1", PointOfInterestType.CREEK, new Coordinate(0, 0));
-        creek2 = new PointOfInterest("2", PointOfInterestType.CREEK, new Coordinate(0, 50));
-        creek3 = new PointOfInterest("3", PointOfInterestType.CREEK, new Coordinate(50, 0));
-        creek4 = new PointOfInterest("4", PointOfInterestType.CREEK, new Coordinate(50, 50));
-        creek5 = new PointOfInterest("5", PointOfInterestType.CREEK, new Coordinate(15, 15));
-        site = new PointOfInterest("site", PointOfInterestType.EMERGENCY_SITE, new Coordinate(25, 25));
+        creek1 = new PointOfInterest("1", PointOfInterestType.CREEK, new Coordinate(7, 13));
+        creek2 = new PointOfInterest("2", PointOfInterestType.CREEK, new Coordinate(2, 40));
+        creek3 = new PointOfInterest("3", PointOfInterestType.CREEK, new Coordinate(40, 2));
+        creek4 = new PointOfInterest("4", PointOfInterestType.CREEK, new Coordinate(35, 35));
+        creek5 = new PointOfInterest("5", PointOfInterestType.CREEK, new Coordinate(17, 20));
+        creek6 = new PointOfInterest("6", PointOfInterestType.CREEK, new Coordinate(69, 25));
+        creek7 = new PointOfInterest("7", PointOfInterestType.CREEK, new Coordinate(34, -21));
+        creek8 = new PointOfInterest("8", PointOfInterestType.CREEK, new Coordinate(-2, 13));
+        creek9 = new PointOfInterest("9", PointOfInterestType.CREEK, new Coordinate(16, -45));
+        creek10 = new PointOfInterest("10", PointOfInterestType.CREEK, new Coordinate(13, -20));
+        site = new PointOfInterest("site", PointOfInterestType.EMERGENCY_SITE, new Coordinate(35, -17));
     }
 
     @Test
@@ -31,8 +36,13 @@ public class MapListTest {
         map.addPointOfInterest(creek3);
         map.addPointOfInterest(creek4);
         map.addPointOfInterest(creek5);
+        map.addPointOfInterest(creek6);
+        map.addPointOfInterest(creek7);
+        map.addPointOfInterest(creek8);
+        map.addPointOfInterest(creek9);
+        map.addPointOfInterest(creek10);
         map.addPointOfInterest(site);
-        assertEquals("5", map.getClosestCreekID());
+        assertEquals("7", map.getClosestCreekID());
     }
 
     @Test
