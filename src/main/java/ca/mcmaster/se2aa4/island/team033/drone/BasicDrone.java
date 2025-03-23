@@ -4,13 +4,14 @@ import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
 // BasicDrone is a concrete implementation of the Drone interface.
-// It encapsulates the drone's state (battery level, heading direction, and location) and movement logic.
+// Encapsulate the drone's state (battery level, heading direction, and location) and movement logic
 public class BasicDrone implements Drone {
 
     private Integer batteryLevel; // Current Battery level of the drone
     private Direction headingDirection; // Current heading direction
     private final Coordinate location; // Current location
 
+    // Initialize drone with battery level, heading, and starting position at origin
     public BasicDrone(Integer batteryLevel, Direction headingDirection) {
         this.batteryLevel = batteryLevel;
         this.headingDirection = headingDirection;
@@ -19,23 +20,23 @@ public class BasicDrone implements Drone {
 
     @Override
     public int getBatteryLevel() {
-        return this.batteryLevel;
+        return this.batteryLevel; // Return current battery level
     }
 
     @Override
     public void drainBattery(int cost) {
-        this.batteryLevel = this.batteryLevel - cost; // Reduces the battery level by a specified cost depending on the action
+        this.batteryLevel = this.batteryLevel - cost; // Reduce the battery level by a specified cost depending on the action
     }
 
     @Override
     public Direction getHeading() {
-        return this.headingDirection;
-    }
+        return this.headingDirection; // Return current heading direction
+    } 
 
     @Override
     public Coordinate getLocation() {
-        return new Coordinate(location.getX(), location.getY());
-    }
+        return new Coordinate(location.getX(), location.getY()); // Return defensive copy of location
+    } 
 
     @Override
     public void moveForward() {
