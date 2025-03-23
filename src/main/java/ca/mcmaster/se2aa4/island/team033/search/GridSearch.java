@@ -11,7 +11,6 @@ import ca.mcmaster.se2aa4.island.team033.drone.DroneController;
 import ca.mcmaster.se2aa4.island.team033.map.Map;
 import ca.mcmaster.se2aa4.island.team033.map.PointOfInterest;
 import ca.mcmaster.se2aa4.island.team033.map.PointOfInterestType;
-import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 import ca.mcmaster.se2aa4.island.team033.stage.MoveToCorner;
 import ca.mcmaster.se2aa4.island.team033.stage.Stage;
 
@@ -68,13 +67,13 @@ public class GridSearch implements Search {
     private void updateBatteryLevel(JSONObject response) {
         int cost = response.getInt("cost");
         drone.drainBattery(cost);
-        logger.info("Budget Remaining: {}", drone.getBatteryLevel());
+        // logger.info("Budget Remaining: {}", drone.getBatteryLevel()); // Uncomment to view the remaining battery budget after each action executed by the drone controller.
     }
 
     // Logs the drone's current position.
     private void logDronePosition() {
-        Coordinate droneLoc = drone.getLocation();
-        logger.info("Drone Position: ({}, {})", droneLoc.getX(), droneLoc.getY());
+        drone.getLocation();
+        // logger.info("Drone Position: ({}, {})", drone.getLocation().getX(), drone.getLocation().getY()); // Uncomment to view the drone's updated position after each action executed by the drone controller.
     }
 
     // Processes additional information from the response.
