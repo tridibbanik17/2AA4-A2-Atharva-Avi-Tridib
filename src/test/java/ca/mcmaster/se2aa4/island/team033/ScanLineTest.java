@@ -24,7 +24,6 @@ public class ScanLineTest {
     private final String scan = "{\"action\":\"scan\"}";
     private final String fly = "{\"action\":\"fly\"}";
 
-
     @BeforeEach
     public void setUp() {
         this.drone = new BasicDrone(10000, Direction.EAST);
