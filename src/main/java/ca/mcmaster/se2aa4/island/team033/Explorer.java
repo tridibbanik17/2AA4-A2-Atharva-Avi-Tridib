@@ -18,6 +18,7 @@ import ca.mcmaster.se2aa4.island.team033.search.GridSearch;
 import ca.mcmaster.se2aa4.island.team033.search.Search;
 import eu.ace_design.island.bot.IExplorerRaid;
 
+// Main explorer class implementing the IExplorerRaid interface.
 public class Explorer implements IExplorerRaid {
 
     private final Logger logger = LogManager.getLogger();
