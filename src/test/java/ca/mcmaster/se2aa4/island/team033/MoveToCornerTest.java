@@ -1,10 +1,10 @@
 package ca.mcmaster.se2aa4.island.team033;
 
+import org.json.JSONObject;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import org.json.JSONObject;
 
 import ca.mcmaster.se2aa4.island.team033.drone.BasicDrone;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
@@ -19,46 +19,52 @@ public class MoveToCornerTest {
     private Drone drone;
     private Controller controller;
     private Stage stage;
-    private final String echoLeft = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"N\"}}";
-    private final String echoRight = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"S\"}}";
-    private final String turn = "{\"action\":\"heading\",\"parameters\":{\"direction\":\"N\"}}";
-    private final String fly = "{\"action\":\"fly\"}";
-
-
+    private final String echoLeft = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"W\"}}"; // Drone's current heading firstion is set to NORTH, so left is WEST
+    private final String echoRight = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"E\"}}"; // Drone's current heading firstion is set to NORTH, so right is EAST
 
     @BeforeEach
-    public void setUp() {
-        this.drone = new BasicDrone(7000, Direction.EAST);
-        this.controller = new DroneController(drone);
-        this.stage = new MoveToCorner();
+    void setUp() {
+        drone = new BasicDrone(7000, Direction.NORTH); // Drone starts facing NORTH
+        controller = new DroneController(drone);
+        stage = new MoveToCorner();
     }
 
     @Test
-    public void testEchoLeftState() {
-        assertEquals(echoLeft, stage.getDroneCommand(controller, drone.getHeading()));
+    void testInitialEchoLeftCommand() {
+        assertEquals(echoLeft, stage.getDroneCommand(controller, drone.getHeading())); // Default is echo left
     }
 
     @Test
-    public void testNextPhase() {
-        Stage nextPhase = stage.getNextStage();
-        Stage correctPhase = new FindIsland();
-        assertEquals(correctPhase.getClass(), nextPhase.getClass());
+    void testTransitionToEchoRight() {
+        // Simulate response for ECHO_LEFT state
+        JSONObject response = echoResponse(5); // Range 5
+        stage.processInfo(response);
+
+        // Next command should be ECHO_RIGHT
+        assertEquals(echoRight, stage.getDroneCommand(controller, drone.getHeading()));
     }
 
     @Test
-    public void testFinished() {
-        assertEquals(false, stage.isFinished());
+    void testNextStageIsFindIsland() {
+        Stage nextStage = stage.getNextStage();
+        Stage expectedStage = new FindIsland();
+        assertEquals(expectedStage.getClass(), nextStage.getClass());
     }
 
     @Test
-    public void testLastPhase() {
-        assertEquals(false, stage.isLastStage());
+    void testIsNotFinishedInitially() {
+        assertFalse(stage.isFinished());
     }
 
+    @Test
+    void testIsNotLastStage() {
+        assertFalse(stage.isLastStage());
+    }
+
+    // Helper method to simulate an echo response.
     private JSONObject echoResponse(int range) {
         JSONObject response = new JSONObject();
         response.put("range", range);
-        response.put("found","OUT_OF_RANGE");
         return response;
     }
 }
