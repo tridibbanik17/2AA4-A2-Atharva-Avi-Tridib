@@ -23,6 +23,7 @@ public class MoveToCornerTest {
     private final String echoRight = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"E\"}}"; // Drone's current heading firstion is set to NORTH, so right is EAST
 
     @BeforeEach
+    @SuppressWarnings("unused")
     void setUp() {
         drone = new BasicDrone(7000, Direction.NORTH); // Drone starts facing NORTH
         controller = new DroneController(drone);
