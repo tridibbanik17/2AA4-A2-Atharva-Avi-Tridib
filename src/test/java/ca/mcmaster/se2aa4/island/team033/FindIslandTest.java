@@ -29,6 +29,7 @@ public class FindIslandTest {
     private final String echoFront = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"E\"}}"; // Echo in the current direction (EAST)
 
     @BeforeEach
+    @SuppressWarnings("unused")
     void setup() {
         drone = new BasicDrone(battery, dir);
         controller = new DroneController(drone);
