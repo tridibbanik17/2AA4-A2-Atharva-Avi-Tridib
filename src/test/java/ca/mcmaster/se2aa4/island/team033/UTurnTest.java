@@ -60,5 +60,15 @@ public class UTurnTest {
         }
     }
 
-      
+    @Test
+    public void turnRightTest() {
+        p1 = new UTurn(false, true);
+        runSequence(rightTurnSequence);
+    }
+
+    @Test
+    public void turnInwardTest() {
+        p1 = new UTurn(true, false);
+        runSequence(inwardLeftTurnSequence);
+    }
 }
