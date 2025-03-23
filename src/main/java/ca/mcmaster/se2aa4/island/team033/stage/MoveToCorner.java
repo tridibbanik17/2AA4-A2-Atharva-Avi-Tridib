@@ -5,10 +5,7 @@ import org.json.JSONObject;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-/**
- * Stage responsible for moving the drone towards the corner of the island.
- * Scans the environment to determine the best path and reach the corner.
- */
+// Stage to navigate the drone to the corner of the island.
 public class MoveToCorner implements Stage {
 
     private enum State {
@@ -46,7 +43,7 @@ public class MoveToCorner implements Stage {
         return false;
     }
 
-    // Inner class for corner navigation logic
+    // Handles corner navigation logic.
     private static class CornerNavigator {
         private State state;
         private int distanceLeft;
@@ -64,14 +61,12 @@ public class MoveToCorner implements Stage {
             return hasReachedCorner;
         }
 
+        // Returns the command based on the current state.
         public String getCommand(Controller controller, Direction dir) {
             Direction turnDirection = switch (state) {
                 case ECHO_LEFT -> dir.getLeft();
                 case ECHO_RIGHT -> dir.getRight();
-                case ALIGN_TO_CORNER, ALIGN_INWARD -> {
-                    turnRight = distanceRight >= distanceLeft;
-                    yield turnRight ? dir.getLeft() : dir.getRight();
-                }
+                case ALIGN_TO_CORNER, ALIGN_INWARD -> turnRight ? dir.getLeft() : dir.getRight();
                 default -> null;
             };
 
@@ -86,6 +81,7 @@ public class MoveToCorner implements Stage {
             };
         }
 
+        // Updates state based on sensor data.
         public void processSensorData(JSONObject info) {
             switch (state) {
                 case ECHO_LEFT -> {
