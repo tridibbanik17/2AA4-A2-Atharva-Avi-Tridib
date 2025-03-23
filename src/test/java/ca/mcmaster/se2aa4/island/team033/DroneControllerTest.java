@@ -18,7 +18,7 @@ public class DroneControllerTest {
 
     @BeforeEach
     public void setUp() {
-        this.drone = new BasicDrone(10000, Direction.EAST);
+        this.drone = new BasicDrone(7000, Direction.EAST);
         this.controller = new DroneController(drone);
     }
 
@@ -29,10 +29,10 @@ public class DroneControllerTest {
 
         assertEquals(decision.toString(), controller.flyCommand());
 
-        Coordinate loc = drone.getLocation();
+        Coordinate position = drone.getLocation();
 
-        assertEquals(1, loc.getX());
-        assertEquals(0, loc.getY());
+        assertEquals(1, position.getX());
+        assertEquals(0, position.getY());
         assertEquals(Direction.EAST, drone.getHeading());
     }
 
@@ -42,16 +42,16 @@ public class DroneControllerTest {
         JSONObject params = new JSONObject();
 
         decision.put("action", "heading");
-        params.put("direction", "N");
+        params.put("direction", "S");
         decision.put("parameters", params);
 
-        assertEquals(decision.toString(), controller.headingCommand(Direction.NORTH));
+        assertEquals(decision.toString(), controller.headingCommand(Direction.SOUTH));
 
-        Coordinate loc = drone.getLocation();
+        Coordinate position = drone.getLocation();
 
-        assertEquals(1, loc.getX());
-        assertEquals(1, loc.getY());
-        assertEquals(Direction.NORTH, drone.getHeading());
+        assertEquals(1, position.getX());
+        assertEquals(-1, position.getY());
+        assertEquals(Direction.SOUTH, drone.getHeading());
     }
 
     @Test
