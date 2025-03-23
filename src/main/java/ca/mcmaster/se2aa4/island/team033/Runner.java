@@ -4,6 +4,7 @@ import java.io.File;
 
 import static eu.ace_design.island.runner.Runner.run;
 
+// Entry point for running the explorer simulation.
 public class Runner {
 
     public static void main(String[] args) {
