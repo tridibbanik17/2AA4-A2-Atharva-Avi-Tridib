@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1434px" preserveAspectRatio="none" style="width:2846px;height:1434px;background:#FFFFFF;" version="1.1" viewBox="0 0 2846 1434" width="2846px" zoomAndPan="magnify"><defs/><g><!--MD5=[55ef9e2422a85ab7bec8c86c10f88b50]
+cluster drone--><g id="cluster_drone"><path d="M808,219 L856,219 A3.75,3.75 0 0 1 858.5,221.5 L865.5,241.2969 L1588,241.2969 A2.5,2.5 0 0 1 1590.5,243.7969 L1590.5,684.5 A2.5,2.5 0 0 1 1588,687 L808,687 A2.5,2.5 0 0 1 805.5,684.5 L805.5,221.5 A2.5,2.5 0 0 1 808,219 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="805.5" x2="865.5" y1="241.2969" y2="241.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="47" x="809.5" y="233.9951">drone</text></g><!--MD5=[c670268a59e1f2fa2e9d3e232bc65e6c]
+cluster map--><g id="cluster_map"><path d="M220,22 L254,22 A3.75,3.75 0 0 1 256.5,24.5 L263.5,44.2969 L779,44.2969 A2.5,2.5 0 0 1 781.5,46.7969 L781.5,897.5 A2.5,2.5 0 0 1 779,900 L220,900 A2.5,2.5 0 0 1 217.5,897.5 L217.5,24.5 A2.5,2.5 0 0 1 220,22 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="217.5" x2="263.5" y1="44.2969" y2="44.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="33" x="221.5" y="36.9951">map</text></g><!--MD5=[f977f4f25e731d82c647a39dabc5b9bd]
+cluster stage--><g id="cluster_stage"><path d="M1268,736 L1313,736 A3.75,3.75 0 0 1 1315.5,738.5 L1322.5,758.2969 L2837,758.2969 A2.5,2.5 0 0 1 2839.5,760.7969 L2839.5,1119.5 A2.5,2.5 0 0 1 2837,1122 L1268,1122 A2.5,2.5 0 0 1 1265.5,1119.5 L1265.5,738.5 A2.5,2.5 0 0 1 1268,736 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="1265.5" x2="1322.5" y1="758.2969" y2="758.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="44" x="1269.5" y="750.9951">stage</text></g><!--MD5=[a2eef0b84d3b6c891bdcb3ede2b90dab]
+cluster position--><g id="cluster_position"><path d="M880,6 L944,6 A3.75,3.75 0 0 1 946.5,8.5 L953.5,28.2969 L1520,28.2969 A2.5,2.5 0 0 1 1522.5,30.7969 L1522.5,167.5 A2.5,2.5 0 0 1 1520,170 L880,170 A2.5,2.5 0 0 1 877.5,167.5 L877.5,8.5 A2.5,2.5 0 0 1 880,6 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="877.5" x2="953.5" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="63" x="881.5" y="20.9951">position</text></g><!--MD5=[2543bc96e7f52754a5d168e5903ba0d4]
+cluster search--><g id="cluster_search"><path d="M808,776.5 L863,776.5 A3.75,3.75 0 0 1 865.5,779 L872.5,798.7969 L1239,798.7969 A2.5,2.5 0 0 1 1241.5,801.2969 L1241.5,1103.5 A2.5,2.5 0 0 1 1239,1106 L808,1106 A2.5,2.5 0 0 1 805.5,1103.5 L805.5,779 A2.5,2.5 0 0 1 808,776.5 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="805.5" x2="872.5" y1="798.7969" y2="798.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="54" x="809.5" y="791.4951">search</text></g><!--MD5=[3eae4776c3b9c1cd85205e10c2ca709f]
+cluster report--><g id="cluster_report"><path d="M354,1171 L405,1171 A3.75,3.75 0 0 1 407.5,1173.5 L414.5,1193.2969 L645,1193.2969 A2.5,2.5 0 0 1 647.5,1195.7969 L647.5,1424.5 A2.5,2.5 0 0 1 645,1427 L354,1427 A2.5,2.5 0 0 1 351.5,1424.5 L351.5,1173.5 A2.5,2.5 0 0 1 354,1171 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="351.5" x2="414.5" y1="1193.2969" y2="1193.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="50" x="355.5" y="1185.9951">report</text></g><!--MD5=[1d7ba1c7002d54515419844fbd155368]
+class Controller--><g id="elem_Controller"><rect codeLine="14" fill="#90EE90" height="129.4844" id="Controller" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="300" x="821.5" y="525.5"/><ellipse cx="933.75" cy="541.5" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M929.6719,537.2656 L929.6719,535.1094 L937.0625,535.1094 L937.0625,537.2656 L934.5938,537.2656 L934.5938,545.3438 L937.0625,545.3438 L937.0625,547.5 L929.6719,547.5 L929.6719,545.3438 L932.1406,545.3438 L932.1406,537.2656 L929.6719,537.2656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="67" x="954.25" y="546.3467">Controller</text><line style="stroke:#000000;stroke-width:0.5;" x1="822.5" x2="1120.5" y1="557.5" y2="557.5"/><line style="stroke:#000000;stroke-width:0.5;" x1="822.5" x2="1120.5" y1="565.5" y2="565.5"/><ellipse cx="832.5" cy="579.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="841.5" y="582.4951">flyCommand(): String</text><ellipse cx="832.5" cy="595.4453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="274" x="841.5" y="598.792">headingCommand(dir: Direction): String</text><ellipse cx="832.5" cy="611.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="253" x="841.5" y="615.0889">echoCommand(dir: Direction): String</text><ellipse cx="832.5" cy="628.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="841.5" y="631.3857">scanCommand(): String</text><ellipse cx="832.5" cy="644.3359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="841.5" y="647.6826">stopCommand(): String</text></g><!--MD5=[2e3f1e60e74253ff42e47f8bfdb04ee2]
+class Drone--><g id="elem_Drone"><rect codeLine="22" fill="#90EE90" height="162.0781" id="Drone" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="244" x="1156.5" y="509"/><ellipse cx="1252.75" cy="525" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1248.6719,520.7656 L1248.6719,518.6094 L1256.0625,518.6094 L1256.0625,520.7656 L1253.5938,520.7656 L1253.5938,528.8438 L1256.0625,528.8438 L1256.0625,531 L1248.6719,531 L1248.6719,528.8438 L1251.1406,528.8438 L1251.1406,520.7656 L1248.6719,520.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="43" x="1273.25" y="529.8467">Drone</text><line style="stroke:#000000;stroke-width:0.5;" x1="1157.5" x2="1399.5" y1="541" y2="541"/><line style="stroke:#000000;stroke-width:0.5;" x1="1157.5" x2="1399.5" y1="549" y2="549"/><ellipse cx="1167.5" cy="562.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="1176.5" y="565.9951">getBatteryLevel(): int</text><ellipse cx="1167.5" cy="578.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="1176.5" y="582.292">drainBattery(cost: Integer): void</text><ellipse cx="1167.5" cy="595.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="1176.5" y="598.5889">getHeading(): Direction</text><ellipse cx="1167.5" cy="611.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="1176.5" y="614.8857">getLocation(): Coordinate</text><ellipse cx="1167.5" cy="627.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="1176.5" y="631.1826">moveForward(): void</text><ellipse cx="1167.5" cy="644.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1176.5" y="647.4795">turnRight(): void</text><ellipse cx="1167.5" cy="660.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="1176.5" y="663.7764">turnLeft(): void</text></g><!--MD5=[cad4519389d7b02f6b54794e3e7683f4]
+class DroneController--><g id="elem_DroneController"><rect codeLine="32" fill="#90EE90" height="145.7813" id="DroneController" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="295" x="822" y="270"/><ellipse cx="910.25" cy="286" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M913.2188,291.6406 Q912.6406,291.9375 912,292.0781 Q911.3594,292.2344 910.6563,292.2344 Q908.1563,292.2344 906.8281,290.5938 Q905.5156,288.9375 905.5156,285.8125 Q905.5156,282.6875 906.8281,281.0313 Q908.1563,279.375 910.6563,279.375 Q911.3594,279.375 912,279.5313 Q912.6563,279.6875 913.2188,279.9844 L913.2188,282.7031 Q912.5938,282.125 912,281.8594 Q911.4063,281.5781 910.7813,281.5781 Q909.4375,281.5781 908.75,282.6563 Q908.0625,283.7188 908.0625,285.8125 Q908.0625,287.9063 908.75,288.9844 Q909.4375,290.0469 910.7813,290.0469 Q911.4063,290.0469 912,289.7813 Q912.5938,289.5 913.2188,288.9219 L913.2188,291.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="930.75" y="290.8467">DroneController</text><line style="stroke:#000000;stroke-width:0.5;" x1="823" x2="1116" y1="302" y2="302"/><line style="stroke:#000000;stroke-width:0.5;" x1="823" x2="1116" y1="310" y2="310"/><ellipse cx="833" cy="323.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="213" x="842" y="326.9951">DroneController(drone: Drone)</text><ellipse cx="833" cy="339.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="842" y="343.292">String flyCommand()</text><ellipse cx="833" cy="356.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="269" x="842" y="359.5889">String headingCommand(dir: Direction)</text><ellipse cx="833" cy="372.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="248" x="842" y="375.8857">String echoCommand(dir: Direction)</text><ellipse cx="833" cy="388.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="842" y="392.1826">String scanCommand()</text><ellipse cx="833" cy="405.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="842" y="408.4795">String stopCommand()</text></g><!--MD5=[b1cc84991de92b3a8601be8d18a2c48b]
+class BasicDrone--><g id="elem_BasicDrone"><rect codeLine="42" fill="#90EE90" height="178.375" id="BasicDrone" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="422" x="1152.5" y="254"/><ellipse cx="1319.25" cy="270" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1322.2188,275.6406 Q1321.6406,275.9375 1321,276.0781 Q1320.3594,276.2344 1319.6563,276.2344 Q1317.1563,276.2344 1315.8281,274.5938 Q1314.5156,272.9375 1314.5156,269.8125 Q1314.5156,266.6875 1315.8281,265.0313 Q1317.1563,263.375 1319.6563,263.375 Q1320.3594,263.375 1321,263.5313 Q1321.6563,263.6875 1322.2188,263.9844 L1322.2188,266.7031 Q1321.5938,266.125 1321,265.8594 Q1320.4063,265.5781 1319.7813,265.5781 Q1318.4375,265.5781 1317.75,266.6563 Q1317.0625,267.7188 1317.0625,269.8125 Q1317.0625,271.9063 1317.75,272.9844 Q1318.4375,274.0469 1319.7813,274.0469 Q1320.4063,274.0469 1321,273.7813 Q1321.5938,273.5 1322.2188,272.9219 L1322.2188,275.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="1339.75" y="274.8467">BasicDrone</text><line style="stroke:#000000;stroke-width:0.5;" x1="1153.5" x2="1573.5" y1="286" y2="286"/><line style="stroke:#000000;stroke-width:0.5;" x1="1153.5" x2="1573.5" y1="294" y2="294"/><ellipse cx="1163.5" cy="307.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="396" x="1172.5" y="310.9951">BasicDrone(batteryLevel: int, headingDirection: Direction)</text><ellipse cx="1163.5" cy="323.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="1172.5" y="327.292">getBatteryLevel(): int</text><ellipse cx="1163.5" cy="340.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="1172.5" y="343.5889">drainBattery(cost: int): void</text><ellipse cx="1163.5" cy="356.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="1172.5" y="359.8857">getHeading(): Direction</text><ellipse cx="1163.5" cy="372.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="1172.5" y="376.1826">getLocation(): Coordinate</text><ellipse cx="1163.5" cy="389.1328" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="1172.5" y="392.4795">moveForward(): void</text><ellipse cx="1163.5" cy="405.4297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="1172.5" y="408.7764">turnRight(): void</text><ellipse cx="1163.5" cy="421.7266" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="100" x="1172.5" y="425.0732">turnLeft(): void</text></g><!--MD5=[833e641434d78a9909f656de00b75ea9]
+class ListMap--><g id="elem_ListMap"><rect codeLine="55" fill="#90EE90" height="48" id="ListMap" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="84" x="457.5" y="566"/><ellipse cx="472.5" cy="582" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M475.4688,587.6406 Q474.8906,587.9375 474.25,588.0781 Q473.6094,588.2344 472.9063,588.2344 Q470.4063,588.2344 469.0781,586.5938 Q467.7656,584.9375 467.7656,581.8125 Q467.7656,578.6875 469.0781,577.0313 Q470.4063,575.375 472.9063,575.375 Q473.6094,575.375 474.25,575.5313 Q474.9063,575.6875 475.4688,575.9844 L475.4688,578.7031 Q474.8438,578.125 474.25,577.8594 Q473.6563,577.5781 473.0313,577.5781 Q471.6875,577.5781 471,578.6563 Q470.3125,579.7188 470.3125,581.8125 Q470.3125,583.9063 471,584.9844 Q471.6875,586.0469 473.0313,586.0469 Q473.6563,586.0469 474.25,585.7813 Q474.8438,585.5 475.4688,584.9219 L475.4688,587.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="486.5" y="586.8467">ListMap</text><line style="stroke:#000000;stroke-width:0.5;" x1="458.5" x2="540.5" y1="598" y2="598"/><line style="stroke:#000000;stroke-width:0.5;" x1="458.5" x2="540.5" y1="606" y2="606"/></g><!--MD5=[4dfc6a72b8dd60daa1b635d583ff79da]
+class Map--><g id="elem_Map"><rect codeLine="57" fill="#90EE90" height="96.8906" id="Map" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="335" x="332" y="787"/><ellipse cx="480.75" cy="803" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M476.6719,798.7656 L476.6719,796.6094 L484.0625,796.6094 L484.0625,798.7656 L481.5938,798.7656 L481.5938,806.8438 L484.0625,806.8438 L484.0625,809 L476.6719,809 L476.6719,806.8438 L479.1406,806.8438 L479.1406,798.7656 L476.6719,798.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="29" x="501.25" y="807.8467">Map</text><line style="stroke:#000000;stroke-width:0.5;" x1="333" x2="666" y1="819" y2="819"/><line style="stroke:#000000;stroke-width:0.5;" x1="333" x2="666" y1="827" y2="827"/><ellipse cx="343" cy="840.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="309" x="352" y="843.9951">addPointOfInterest(poi: PointOfInterest): void</text><ellipse cx="343" cy="856.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="200" x="352" y="860.292">getEmergencySiteID(): String</text><ellipse cx="343" cy="873.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="352" y="876.5889">getClosetCreekID(): String</text></g><!--MD5=[d57db24e1b76ea943ad2d0b33e9dc1f5]
+class PointOfInterestType--><g id="elem_PointOfInterestType"><rect codeLine="63" fill="#90EE90" height="80.5938" id="PointOfInterestType" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="169" x="415" y="57"/><ellipse cx="430" cy="73" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M434.1094,79 L426.3906,79 L426.3906,66.6094 L434.1094,66.6094 L434.1094,68.7656 L428.8438,68.7656 L428.8438,71.4375 L433.6094,71.4375 L433.6094,73.5938 L428.8438,73.5938 L428.8438,76.8438 L434.1094,76.8438 L434.1094,79 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="444" y="77.8467">PointOfInterestType</text><line style="stroke:#000000;stroke-width:0.5;" x1="416" x2="583" y1="89" y2="89"/><ellipse cx="426" cy="102.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="435" y="105.9951">CREEK</text><ellipse cx="426" cy="118.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="435" y="122.292">EMERGENCY_SITE</text><line style="stroke:#000000;stroke-width:0.5;" x1="416" x2="583" y1="129.5938" y2="129.5938"/></g><!--MD5=[a7f6a4a709a56d2ca69dba73d2e1d24a]
+class PointOfInterest--><g id="elem_PointOfInterest"><rect codeLine="68" fill="#90EE90" height="113.1875" id="PointOfInterest" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="531" x="234" y="286.5"/><ellipse cx="443.75" cy="302.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M446.7188,308.1406 Q446.1406,308.4375 445.5,308.5781 Q444.8594,308.7344 444.1563,308.7344 Q441.6563,308.7344 440.3281,307.0938 Q439.0156,305.4375 439.0156,302.3125 Q439.0156,299.1875 440.3281,297.5313 Q441.6563,295.875 444.1563,295.875 Q444.8594,295.875 445.5,296.0313 Q446.1563,296.1875 446.7188,296.4844 L446.7188,299.2031 Q446.0938,298.625 445.5,298.3594 Q444.9063,298.0781 444.2813,298.0781 Q442.9375,298.0781 442.25,299.1563 Q441.5625,300.2188 441.5625,302.3125 Q441.5625,304.4063 442.25,305.4844 Q442.9375,306.5469 444.2813,306.5469 Q444.9063,306.5469 445.5,306.2813 Q446.0938,306 446.7188,305.4219 L446.7188,308.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103" x="464.25" y="307.3467">PointOfInterest</text><line style="stroke:#000000;stroke-width:0.5;" x1="235" x2="764" y1="318.5" y2="318.5"/><line style="stroke:#000000;stroke-width:0.5;" x1="235" x2="764" y1="326.5" y2="326.5"/><ellipse cx="245" cy="340.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="505" x="254" y="343.4951">PointOfInterest(id: String, type: PointOfInterestType, location: Coordinate)</text><ellipse cx="245" cy="356.4453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="254" y="359.792">getId(): String</text><ellipse cx="245" cy="372.7422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="213" x="254" y="376.0889">getType(): PointOfInterestType</text><ellipse cx="245" cy="389.0391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="176" x="254" y="392.3857">getLocation(): Coordinate</text></g><!--MD5=[479604a59e46df93ef17a10045606f66]
+class FindIsland--><g id="elem_FindIsland"><rect codeLine="77" fill="#90EE90" height="129.4844" id="FindIsland" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="359" x="1676" y="977"/><ellipse cx="1816.75" cy="993" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1819.7188,998.6406 Q1819.1406,998.9375 1818.5,999.0781 Q1817.8594,999.2344 1817.1563,999.2344 Q1814.6563,999.2344 1813.3281,997.5938 Q1812.0156,995.9375 1812.0156,992.8125 Q1812.0156,989.6875 1813.3281,988.0313 Q1814.6563,986.375 1817.1563,986.375 Q1817.8594,986.375 1818.5,986.5313 Q1819.1563,986.6875 1819.7188,986.9844 L1819.7188,989.7031 Q1819.0938,989.125 1818.5,988.8594 Q1817.9063,988.5781 1817.2813,988.5781 Q1815.9375,988.5781 1815.25,989.6563 Q1814.5625,990.7188 1814.5625,992.8125 Q1814.5625,994.9063 1815.25,995.9844 Q1815.9375,997.0469 1817.2813,997.0469 Q1817.9063,997.0469 1818.5,996.7813 Q1819.0938,996.5 1819.7188,995.9219 L1819.7188,998.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="69" x="1837.25" y="997.8467">FindIsland</text><line style="stroke:#000000;stroke-width:0.5;" x1="1677" x2="2034" y1="1009" y2="1009"/><line style="stroke:#000000;stroke-width:0.5;" x1="1677" x2="2034" y1="1017" y2="1017"/><ellipse cx="1687" cy="1030.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="333" x="1696" y="1033.9951">getDroneCommand(Controller, Direction): String</text><ellipse cx="1687" cy="1046.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="1696" y="1050.292">processInfo(JSONObject): void</text><ellipse cx="1687" cy="1063.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="1696" y="1066.5889">getNextStage(): Stage</text><ellipse cx="1687" cy="1079.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="1696" y="1082.8857">isFinished(): boolean</text><ellipse cx="1687" cy="1095.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="1696" y="1099.1826">isLastStage(): boolean</text></g><!--MD5=[285ab7d62d4066227885d174393fe1a8]
+class ScanLine--><g id="elem_ScanLine"><rect codeLine="85" fill="#90EE90" height="129.4844" id="ScanLine" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="359" x="2070" y="977"/><ellipse cx="2214.25" cy="993" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2217.2188,998.6406 Q2216.6406,998.9375 2216,999.0781 Q2215.3594,999.2344 2214.6563,999.2344 Q2212.1563,999.2344 2210.8281,997.5938 Q2209.5156,995.9375 2209.5156,992.8125 Q2209.5156,989.6875 2210.8281,988.0313 Q2212.1563,986.375 2214.6563,986.375 Q2215.3594,986.375 2216,986.5313 Q2216.6563,986.6875 2217.2188,986.9844 L2217.2188,989.7031 Q2216.5938,989.125 2216,988.8594 Q2215.4063,988.5781 2214.7813,988.5781 Q2213.4375,988.5781 2212.75,989.6563 Q2212.0625,990.7188 2212.0625,992.8125 Q2212.0625,994.9063 2212.75,995.9844 Q2213.4375,997.0469 2214.7813,997.0469 Q2215.4063,997.0469 2216,996.7813 Q2216.5938,996.5 2217.2188,995.9219 L2217.2188,998.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="2234.75" y="997.8467">ScanLine</text><line style="stroke:#000000;stroke-width:0.5;" x1="2071" x2="2428" y1="1009" y2="1009"/><line style="stroke:#000000;stroke-width:0.5;" x1="2071" x2="2428" y1="1017" y2="1017"/><ellipse cx="2081" cy="1030.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="333" x="2090" y="1033.9951">getDroneCommand(Controller, Direction): String</text><ellipse cx="2081" cy="1046.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="2090" y="1050.292">processInfo(JSONObject): void</text><ellipse cx="2081" cy="1063.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="2090" y="1066.5889">getNextStage(): Stage</text><ellipse cx="2081" cy="1079.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="2090" y="1082.8857">isFinished(): boolean</text><ellipse cx="2081" cy="1095.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="2090" y="1099.1826">isLastStage(): boolean</text></g><!--MD5=[0597e0d8025340cc6e5ec1a45eddfb4c]
+class MoveToCorner--><g id="elem_MoveToCorner"><rect codeLine="93" fill="#90EE90" height="129.4844" id="MoveToCorner" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="359" x="2464" y="977"/><ellipse cx="2588.25" cy="993" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M2591.2188,998.6406 Q2590.6406,998.9375 2590,999.0781 Q2589.3594,999.2344 2588.6563,999.2344 Q2586.1563,999.2344 2584.8281,997.5938 Q2583.5156,995.9375 2583.5156,992.8125 Q2583.5156,989.6875 2584.8281,988.0313 Q2586.1563,986.375 2588.6563,986.375 Q2589.3594,986.375 2590,986.5313 Q2590.6563,986.6875 2591.2188,986.9844 L2591.2188,989.7031 Q2590.5938,989.125 2590,988.8594 Q2589.4063,988.5781 2588.7813,988.5781 Q2587.4375,988.5781 2586.75,989.6563 Q2586.0625,990.7188 2586.0625,992.8125 Q2586.0625,994.9063 2586.75,995.9844 Q2587.4375,997.0469 2588.7813,997.0469 Q2589.4063,997.0469 2590,996.7813 Q2590.5938,996.5 2591.2188,995.9219 L2591.2188,998.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="2608.75" y="997.8467">MoveToCorner</text><line style="stroke:#000000;stroke-width:0.5;" x1="2465" x2="2822" y1="1009" y2="1009"/><line style="stroke:#000000;stroke-width:0.5;" x1="2465" x2="2822" y1="1017" y2="1017"/><ellipse cx="2475" cy="1030.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="333" x="2484" y="1033.9951">getDroneCommand(Controller, Direction): String</text><ellipse cx="2475" cy="1046.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="2484" y="1050.292">processInfo(JSONObject): void</text><ellipse cx="2475" cy="1063.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="2484" y="1066.5889">getNextStage(): Stage</text><ellipse cx="2475" cy="1079.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="2484" y="1082.8857">isFinished(): boolean</text><ellipse cx="2475" cy="1095.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="2484" y="1099.1826">isLastStage(): boolean</text></g><!--MD5=[706da705568b68471d84a7b50009317d]
+class UTurn--><g id="elem_UTurn"><rect codeLine="101" fill="#90EE90" height="129.4844" id="UTurn" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="359" x="1282" y="977"/><ellipse cx="1436.25" cy="993" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1439.2188,998.6406 Q1438.6406,998.9375 1438,999.0781 Q1437.3594,999.2344 1436.6563,999.2344 Q1434.1563,999.2344 1432.8281,997.5938 Q1431.5156,995.9375 1431.5156,992.8125 Q1431.5156,989.6875 1432.8281,988.0313 Q1434.1563,986.375 1436.6563,986.375 Q1437.3594,986.375 1438,986.5313 Q1438.6563,986.6875 1439.2188,986.9844 L1439.2188,989.7031 Q1438.5938,989.125 1438,988.8594 Q1437.4063,988.5781 1436.7813,988.5781 Q1435.4375,988.5781 1434.75,989.6563 Q1434.0625,990.7188 1434.0625,992.8125 Q1434.0625,994.9063 1434.75,995.9844 Q1435.4375,997.0469 1436.7813,997.0469 Q1437.4063,997.0469 1438,996.7813 Q1438.5938,996.5 1439.2188,995.9219 L1439.2188,998.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="1456.75" y="997.8467">UTurn</text><line style="stroke:#000000;stroke-width:0.5;" x1="1283" x2="1640" y1="1009" y2="1009"/><line style="stroke:#000000;stroke-width:0.5;" x1="1283" x2="1640" y1="1017" y2="1017"/><ellipse cx="1293" cy="1030.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="333" x="1302" y="1033.9951">getDroneCommand(Controller, Direction): String</text><ellipse cx="1293" cy="1046.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="206" x="1302" y="1050.292">processInfo(JSONObject): void</text><ellipse cx="1293" cy="1063.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="1302" y="1066.5889">getNextStage(): Stage</text><ellipse cx="1293" cy="1079.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="1302" y="1082.8857">isFinished(): boolean</text><ellipse cx="1293" cy="1095.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="1302" y="1099.1826">isLastStage(): boolean</text></g><!--MD5=[cbfc57bef1c415c3126d20e2f7e364c7]
+class Stage--><g id="elem_Stage"><rect codeLine="109" fill="#90EE90" height="129.4844" id="Stage" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="459" x="1626" y="771"/><ellipse cx="1831.25" cy="787" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1827.1719,782.7656 L1827.1719,780.6094 L1834.5625,780.6094 L1834.5625,782.7656 L1832.0938,782.7656 L1832.0938,790.8438 L1834.5625,790.8438 L1834.5625,793 L1827.1719,793 L1827.1719,790.8438 L1829.6406,790.8438 L1829.6406,782.7656 L1827.1719,782.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="40" x="1851.75" y="791.8467">Stage</text><line style="stroke:#000000;stroke-width:0.5;" x1="1627" x2="2084" y1="803" y2="803"/><line style="stroke:#000000;stroke-width:0.5;" x1="1627" x2="2084" y1="811" y2="811"/><ellipse cx="1637" cy="824.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="433" x="1646" y="827.9951">getDroneCommand(controller: Controller, dir: Direction): String</text><ellipse cx="1637" cy="840.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="240" x="1646" y="844.292">processInfo(info: JSONObject): void</text><ellipse cx="1637" cy="857.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="153" x="1646" y="860.5889">getNextStage(): Stage</text><ellipse cx="1637" cy="873.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="1646" y="876.8857">isFinished(): boolean</text><ellipse cx="1637" cy="889.8359" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="1646" y="893.1826">isLastStage(): boolean</text></g><!--MD5=[02f7077ed79257124e28b791f351f1d7]
+class Direction--><g id="elem_Direction"><rect codeLine="119" fill="#90EE90" height="113.1875" id="Direction" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="286" x="1220.5" y="41"/><ellipse cx="1328.25" cy="57" fill="#EB937F" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1332.3594,63 L1324.6406,63 L1324.6406,50.6094 L1332.3594,50.6094 L1332.3594,52.7656 L1327.0938,52.7656 L1327.0938,55.4375 L1331.8594,55.4375 L1331.8594,57.5938 L1327.0938,57.5938 L1327.0938,60.8438 L1332.3594,60.8438 L1332.3594,63 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="1348.75" y="61.8467">Direction</text><line style="stroke:#000000;stroke-width:0.5;" x1="1221.5" x2="1505.5" y1="73" y2="73"/><line style="stroke:#000000;stroke-width:0.5;" x1="1221.5" x2="1505.5" y1="81" y2="81"/><ellipse cx="1231.5" cy="94.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="1240.5" y="97.9951">getSymbol(): String</text><ellipse cx="1231.5" cy="110.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="1240.5" y="114.292">getRight(): String</text><ellipse cx="1231.5" cy="127.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="1240.5" y="130.5889">getLeft(): String</text><ellipse cx="1231.5" cy="143.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="260" x="1240.5" y="146.8857">fromSymbol(symbol: String): Direction</text></g><!--MD5=[8c7d7abc12e214c3cc12c9ab70edee11]
+class Coordinate--><g id="elem_Coordinate"><rect codeLine="126" fill="#90EE90" height="113.1875" id="Coordinate" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="292" x="893.5" y="41"/><ellipse cx="997.25" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1000.2188,62.6406 Q999.6406,62.9375 999,63.0781 Q998.3594,63.2344 997.6563,63.2344 Q995.1563,63.2344 993.8281,61.5938 Q992.5156,59.9375 992.5156,56.8125 Q992.5156,53.6875 993.8281,52.0313 Q995.1563,50.375 997.6563,50.375 Q998.3594,50.375 999,50.5313 Q999.6563,50.6875 1000.2188,50.9844 L1000.2188,53.7031 Q999.5938,53.125 999,52.8594 Q998.4063,52.5781 997.7813,52.5781 Q996.4375,52.5781 995.75,53.6563 Q995.0625,54.7188 995.0625,56.8125 Q995.0625,58.9063 995.75,59.9844 Q996.4375,61.0469 997.7813,61.0469 Q998.4063,61.0469 999,60.7813 Q999.5938,60.5 1000.2188,59.9219 L1000.2188,62.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1017.75" y="61.8467">Coordinate</text><line style="stroke:#000000;stroke-width:0.5;" x1="894.5" x2="1184.5" y1="73" y2="73"/><line style="stroke:#000000;stroke-width:0.5;" x1="894.5" x2="1184.5" y1="81" y2="81"/><ellipse cx="904.5" cy="94.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="160" x="913.5" y="97.9951">Coordinate(x: int, y: int)</text><ellipse cx="904.5" cy="110.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="913.5" y="114.292">getX(): int</text><ellipse cx="904.5" cy="127.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="913.5" y="130.5889">getY(): int</text><ellipse cx="904.5" cy="143.5391" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="913.5" y="146.8857">distanceTo(other: Coordinate): double</text></g><!--MD5=[75111125d61f0ab8d3625103a9932eb7]
+class GridSearch--><g id="elem_GridSearch"><rect codeLine="135" fill="#90EE90" height="48" id="GridSearch" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="108" x="1080.5" y="811.5"/><ellipse cx="1095.5" cy="827.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M1098.4688,833.1406 Q1097.8906,833.4375 1097.25,833.5781 Q1096.6094,833.7344 1095.9063,833.7344 Q1093.4063,833.7344 1092.0781,832.0938 Q1090.7656,830.4375 1090.7656,827.3125 Q1090.7656,824.1875 1092.0781,822.5313 Q1093.4063,820.875 1095.9063,820.875 Q1096.6094,820.875 1097.25,821.0313 Q1097.9063,821.1875 1098.4688,821.4844 L1098.4688,824.2031 Q1097.8438,823.625 1097.25,823.3594 Q1096.6563,823.0781 1096.0313,823.0781 Q1094.6875,823.0781 1094,824.1563 Q1093.3125,825.2188 1093.3125,827.3125 Q1093.3125,829.4063 1094,830.4844 Q1094.6875,831.5469 1096.0313,831.5469 Q1096.6563,831.5469 1097.25,831.2813 Q1097.8438,831 1098.4688,830.4219 L1098.4688,833.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="1109.5" y="832.3467">GridSearch</text><line style="stroke:#000000;stroke-width:0.5;" x1="1081.5" x2="1187.5" y1="843.5" y2="843.5"/><line style="stroke:#000000;stroke-width:0.5;" x1="1081.5" x2="1187.5" y1="851.5" y2="851.5"/></g><!--MD5=[d5a630d213adc2e3986060bd811a90b1]
+class Search--><g id="elem_Search"><rect codeLine="137" fill="#90EE90" height="96.8906" id="Search" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="404" x="821.5" y="993"/><ellipse cx="995.25" cy="1009" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M991.1719,1004.7656 L991.1719,1002.6094 L998.5625,1002.6094 L998.5625,1004.7656 L996.0938,1004.7656 L996.0938,1012.8438 L998.5625,1012.8438 L998.5625,1015 L991.1719,1015 L991.1719,1012.8438 L993.6406,1012.8438 L993.6406,1004.7656 L991.1719,1004.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="48" x="1015.75" y="1013.8467">Search</text><line style="stroke:#000000;stroke-width:0.5;" x1="822.5" x2="1224.5" y1="1025" y2="1025"/><line style="stroke:#000000;stroke-width:0.5;" x1="822.5" x2="1224.5" y1="1033" y2="1033"/><ellipse cx="832.5" cy="1046.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="841.5" y="1049.9951">GridSearch(Drone)</text><ellipse cx="832.5" cy="1062.9453" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="161" x="841.5" y="1066.292">performSearch(): String</text><ellipse cx="832.5" cy="1079.2422" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="378" x="841.5" y="1082.5889">readResponse(response: JSONObject, map: Map): void</text></g><!--MD5=[71556af9a4c2905f9a63f25ba2c5bd20]
+class NavigationReport--><g id="elem_NavigationReport"><rect codeLine="146" fill="#90EE90" height="64.2969" id="NavigationReport" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="263" x="368" y="1347"/><ellipse cx="436.25" cy="1363" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M439.2188,1368.6406 Q438.6406,1368.9375 438,1369.0781 Q437.3594,1369.2344 436.6563,1369.2344 Q434.1563,1369.2344 432.8281,1367.5938 Q431.5156,1365.9375 431.5156,1362.8125 Q431.5156,1359.6875 432.8281,1358.0313 Q434.1563,1356.375 436.6563,1356.375 Q437.3594,1356.375 438,1356.5313 Q438.6563,1356.6875 439.2188,1356.9844 L439.2188,1359.7031 Q438.5938,1359.125 438,1358.8594 Q437.4063,1358.5781 436.7813,1358.5781 Q435.4375,1358.5781 434.75,1359.6563 Q434.0625,1360.7188 434.0625,1362.8125 Q434.0625,1364.9063 434.75,1365.9844 Q435.4375,1367.0469 436.7813,1367.0469 Q437.4063,1367.0469 438,1366.7813 Q438.5938,1366.5 439.2188,1365.9219 L439.2188,1368.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="456.75" y="1367.8467">NavigationReport</text><line style="stroke:#000000;stroke-width:0.5;" x1="369" x2="630" y1="1379" y2="1379"/><line style="stroke:#000000;stroke-width:0.5;" x1="369" x2="630" y1="1387" y2="1387"/><ellipse cx="379" cy="1400.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="237" x="388" y="1403.9951">generateReport(map: Map): String</text></g><!--MD5=[f00dbe8c0302c6aec2cb26b3c659c8fc]
+class Report--><g id="elem_Report"><rect codeLine="150" fill="#90EE90" height="64.2969" id="Report" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="263" x="368" y="1206"/><ellipse cx="471.75" cy="1222" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M467.6719,1217.7656 L467.6719,1215.6094 L475.0625,1215.6094 L475.0625,1217.7656 L472.5938,1217.7656 L472.5938,1225.8438 L475.0625,1225.8438 L475.0625,1228 L467.6719,1228 L467.6719,1225.8438 L470.1406,1225.8438 L470.1406,1217.7656 L467.6719,1217.7656 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="47" x="492.25" y="1226.8467">Report</text><line style="stroke:#000000;stroke-width:0.5;" x1="369" x2="630" y1="1238" y2="1238"/><line style="stroke:#000000;stroke-width:0.5;" x1="369" x2="630" y1="1246" y2="1246"/><ellipse cx="379" cy="1259.6484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="237" x="388" y="1262.9951">generateReport(map: Map): String</text></g><!--MD5=[58299f72e519a9852937d5dfab00b46a]
+class Explorer--><g id="elem_Explorer"><rect codeLine="155" fill="#90EE90" height="48" id="Explorer" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="88" x="455.5" y="1017.5"/><ellipse cx="470.5" cy="1033.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M473.4688,1039.1406 Q472.8906,1039.4375 472.25,1039.5781 Q471.6094,1039.7344 470.9063,1039.7344 Q468.4063,1039.7344 467.0781,1038.0938 Q465.7656,1036.4375 465.7656,1033.3125 Q465.7656,1030.1875 467.0781,1028.5313 Q468.4063,1026.875 470.9063,1026.875 Q471.6094,1026.875 472.25,1027.0313 Q472.9063,1027.1875 473.4688,1027.4844 L473.4688,1030.2031 Q472.8438,1029.625 472.25,1029.3594 Q471.6563,1029.0781 471.0313,1029.0781 Q469.6875,1029.0781 469,1030.1563 Q468.3125,1031.2188 468.3125,1033.3125 Q468.3125,1035.4063 469,1036.4844 Q469.6875,1037.5469 471.0313,1037.5469 Q471.6563,1037.5469 472.25,1037.2813 Q472.8438,1037 473.4688,1036.4219 L473.4688,1039.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="484.5" y="1038.3467">Explorer</text><line style="stroke:#000000;stroke-width:0.5;" x1="456.5" x2="542.5" y1="1049.5" y2="1049.5"/><line style="stroke:#000000;stroke-width:0.5;" x1="456.5" x2="542.5" y1="1057.5" y2="1057.5"/></g><!--MD5=[cd45b77dafe01d3c8a27bbc3fefc2e35]
+class Runner--><g id="elem_Runner"><rect codeLine="159" fill="#90EE90" height="64.2969" id="Runner" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:0.5;" width="195" x="7" y="803.5"/><ellipse cx="74.75" cy="819.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M77.7188,825.1406 Q77.1406,825.4375 76.5,825.5781 Q75.8594,825.7344 75.1563,825.7344 Q72.6563,825.7344 71.3281,824.0938 Q70.0156,822.4375 70.0156,819.3125 Q70.0156,816.1875 71.3281,814.5313 Q72.6563,812.875 75.1563,812.875 Q75.8594,812.875 76.5,813.0313 Q77.1563,813.1875 77.7188,813.4844 L77.7188,816.2031 Q77.0938,815.625 76.5,815.3594 Q75.9063,815.0781 75.2813,815.0781 Q73.9375,815.0781 73.25,816.1563 Q72.5625,817.2188 72.5625,819.3125 Q72.5625,821.4063 73.25,822.4844 Q73.9375,823.5469 75.2813,823.5469 Q75.9063,823.5469 76.5,823.2813 Q77.0938,823 77.7188,822.4219 L77.7188,825.1406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="95.25" y="824.3467">Runner</text><line style="stroke:#000000;stroke-width:0.5;" x1="8" x2="201" y1="835.5" y2="835.5"/><line style="stroke:#000000;stroke-width:0.5;" x1="8" x2="201" y1="843.5" y2="843.5"/><ellipse cx="18" cy="857.1484" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="27" y="860.4951">main(args: String[]): void</text></g><!--MD5=[b196038b2139200d907ef524502fe140]
+reverse link Stage to MoveToCorner--><g id="link_Stage_MoveToCorner"><path codeLine="164" d="M2104.85,891.21 C2210.69,915.61 2335.11,945.86 2446.5,977 C2452.21,978.6 2458,980.25 2463.84,981.95 " fill="none" id="Stage-backto-MoveToCorner" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="2103.23,898.02,2085.31,886.72,2106.37,884.38,2103.23,898.02" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="2334.5" y="943.0669">implements</text></g><!--MD5=[ef0eccf436e9d0379932c1eec5cd5ecc]
+reverse link Stage to FindIsland--><g id="link_Stage_FindIsland"><path codeLine="165" d="M1855.5,920.28 C1855.5,939.2 1855.5,958.99 1855.5,976.92 " fill="none" id="Stage-backto-FindIsland" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1848.5,920.21,1855.5,900.21,1862.5,920.21,1848.5,920.21" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="1856.5" y="943.0669">implements</text></g><!--MD5=[68af4680c8eb9bb91b0615fa2f32c7ee]
+reverse link Stage to ScanLine--><g id="link_Stage_ScanLine"><path codeLine="166" d="M1996.26,909.38 C2038.84,931.43 2085.24,955.45 2126.55,976.84 " fill="none" id="Stage-backto-ScanLine" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1992.82,915.48,1978.27,900.07,1999.25,903.05,1992.82,915.48" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="2064.5" y="943.0669">implements</text></g><!--MD5=[c7246ba3276be822cf4d8b5aaf6da751]
+reverse link Stage to UTurn--><g id="link_Stage_UTurn"><path codeLine="167" d="M1714.74,909.38 C1672.16,931.43 1625.76,955.45 1584.45,976.84 " fill="none" id="Stage-backto-UTurn" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1711.75,903.05,1732.73,900.07,1718.18,915.48,1711.75,903.05" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="1670.5" y="943.0669">implements</text></g><!--MD5=[a02e8027669d1174a25610dbaa4e568b]
+link GridSearch to Search--><g id="link_GridSearch_Search"><path codeLine="170" d="M1121.98,859.5 C1106.82,887.36 1080.64,935.48 1059.08,975.1 " fill="none" id="GridSearch-to-Search" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1065.11,978.67,1049.41,992.89,1052.82,971.98,1065.11,978.67" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="1082.5" y="943.0669">implements</text></g><!--MD5=[1c0126d439347b817a2d7cd71e27e4c6]
+link DroneController to Controller--><g id="link_DroneController_Controller"><path codeLine="173" d="M970.09,416.18 C970.32,444.01 970.58,476.03 970.81,504.89 " fill="none" id="DroneController-to-Controller" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="977.82,505.18,970.98,525.24,963.82,505.3,977.82,505.18" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="971.5" y="475.0669">implements</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="961.765" y="435.9535">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="962.4856" y="514.3842">1</text></g><!--MD5=[b9bebb4b9c9f2c599b7479d75efb4ee6]
+link BasicDrone to Drone--><g id="link_BasicDrone_Drone"><path codeLine="174" d="M1332.93,432.1 C1326.47,450.73 1319.61,470.52 1313.01,489.53 " fill="none" id="BasicDrone-to-Drone" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1319.56,492,1306.39,508.6,1306.34,487.41,1319.56,492" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="1321.5" y="475.0669">implements</text></g><!--MD5=[a8149ea01d067bf0add5d212c51d7331]
+link DroneController to Drone--><g id="link_DroneController_Drone"><path codeLine="175" d="M1069.9502,423.6264 C1069.9502,423.6264 1135.69,475.77 1167.04,500.63 " fill="none" id="DroneController-Drone" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1177.57,508.97,1173.0005,500.2454,1173.6512,505.8647,1168.0319,506.5154,1177.57,508.97" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1173.6512" x2="1167.385" y1="505.8647" y2="500.895"/><polygon fill="none" points="1060.54,416.18,1062.7629,423.0399,1069.9502,423.6264,1067.7272,416.7665,1060.54,416.18" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="1133.5" y="475.0669">controls</text></g><!--MD5=[26cd18621dd6606ee4a7a635311fb9e5]
+reverse link Report to NavigationReport--><g id="link_Report_NavigationReport"><path codeLine="178" d="M499.5,1290.45 C499.5,1309.41 499.5,1330.29 499.5,1346.91 " fill="none" id="Report-backto-NavigationReport" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="492.5,1290.19,499.5,1270.19,506.5,1290.19,492.5,1290.19" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="65" x="500.5" y="1313.0669">generates</text></g><!--MD5=[b2e7dae31d3bfdafcae3e6343b9e2e16]
+link Coordinate to PointOfInterest--><g id="link_Coordinate_PointOfInterest"><path codeLine="181" d="M904.26,159.48 C821.88,196.63 633.5884,281.5352 633.5884,281.5352 " fill="none" id="Coordinate-PointOfInterest" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="622.65,286.47,629.7641,287.6487,633.5884,281.5352,626.4742,280.3565,622.65,286.47" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="916.29,154.06,906.4413,154.1105,911.7314,156.1141,909.7278,161.4043,916.29,154.06" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="911.7314" x2="904.44" y1="156.1141" y2="159.4"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="64" x="834.5" y="199.0669">located at</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="891.9912" y="174.3311">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="629.9161" y="275.3295">1</text></g><!--MD5=[a605b76c222674e3455ec03cd37f7003]
+link ListMap to Map--><g id="link_ListMap_Map"><path codeLine="184" d="M499.5,614.35 C499.5,649.08 499.5,715.73 499.5,766.64 " fill="none" id="ListMap-to-Map" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="506.5,766.66,499.5,786.66,492.5,766.66,506.5,766.66" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="54" x="500.5" y="716.0669">contains</text></g><!--MD5=[293e5397af7ec91e7dcca9b8eff20e51]
+link PointOfInterest to ListMap--><g id="link_PointOfInterest_ListMap"><path codeLine="185" d="M499.5,412.6 C499.5,458.08 499.5,553.74 499.5,553.74 " fill="none" id="PointOfInterest-ListMap" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="499.5,565.74,503.5,559.74,499.5,553.74,495.5,559.74,499.5,565.74" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="499.5,399.59,495.5,408.59,499.5,404.59,503.5,408.59,499.5,399.59" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="499.5" x2="499.5" y1="404.59" y2="412.59"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56" x="500.5" y="475.0669">stored in</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="475.0266" y="419.8649">1..*</text></g><!--MD5=[975945190115244cfea1fd5cbb7d254b]
+reverse link PointOfInterestType to PointOfInterest--><g id="link_PointOfInterestType_PointOfInterest"><path codeLine="186" d="M499.5,143.48 C499.5,183.82 499.5,243.15 499.5,286.44 " fill="none" id="PointOfInterestType-backto-PointOfInterest" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="499.5,138.16,495.5,147.16,499.5,143.16,503.5,147.16,499.5,138.16" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="94" x="500.5" y="199.0669">defines type of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="473.6625" y="157.6427">1..2</text></g><!--MD5=[b22d7491db271323d02496566d7cb442]
+link Drone to GridSearch--><g id="link_Drone_GridSearch"><path codeLine="188" d="M1224.42,682.44 C1200.11,723.56 1154.2479,801.1007 1154.2479,801.1007 " fill="none" id="Drone-GridSearch" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1148.14,811.43,1154.637,808.3013,1154.2479,801.1007,1147.7508,804.2294,1148.14,811.43" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1231.15,671.07,1223.126,676.781,1228.6051,675.3739,1230.0122,680.8529,1231.15,671.07" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1228.6051" x2="1224.535" y1="675.3739" y2="682.255"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="1211.5" y="716.0669">scanned by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1218.5766" y="691.0276">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1142.6103" y="800.4241">1</text></g><!--MD5=[ede20d0d44dddaa49efb0dde3dd38d32]
+link Controller to GridSearch--><g id="link_Controller_GridSearch"><path codeLine="189" d="M1021.54,665.76 C1051.58,710.63 1112.2562,801.2937 1112.2562,801.2937 " fill="none" id="Controller-GridSearch" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1118.94,811.26,1118.9202,804.0489,1112.2562,801.2937,1112.276,808.5048,1118.94,811.26" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1014.11,654.66,1015.7859,664.3652,1016.8886,658.8169,1022.4369,659.9195,1014.11,654.66" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1016.8886" x2="1021.345" y1="658.8169" y2="665.46"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="100" x="1053.5" y="716.0669">commanded by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1010.5743" y="675.0501">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1106.1723" y="800.6065">1</text></g><!--MD5=[85ae22d1c84ffefab2ed5120fa77432e]
+link GridSearch to Stage--><g id="link_GridSearch_Stage"><path codeLine="190" d="M1200.69,835.5 C1200.69,835.5 1468.12,835.5 1612.73,835.5 " fill="none" id="GridSearch-Stage" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1625.74,835.5,1616.74,831.5,1620.74,835.5,1616.74,839.5,1625.74,835.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1620.74" x2="1612.74" y1="835.5" y2="835.5"/><polygon fill="#181818" points="1188.69,835.5,1194.69,839.5,1200.69,835.5,1194.69,831.5,1188.69,835.5" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="1381.75" y="828.5669">involves</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1196.5093" y="831.568">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="1594.8237" y="832.315">1..*</text></g><!--MD5=[f9bd8cbb64ba698762d26d8718e68a37]
+link Coordinate to BasicDrone--><g id="link_Coordinate_BasicDrone"><path codeLine="192" d="M1124.25,162.2 C1158.35,187.82 1236.7911,246.7652 1236.7911,246.7652 " fill="none" id="Coordinate-BasicDrone" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1246.38,253.98,1243.9905,247.1763,1236.7911,246.7652,1239.1806,253.5689,1246.38,253.98" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1113.43,154.06,1118.2224,162.6642,1117.4274,157.0635,1123.0281,156.2684,1113.43,154.06" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1117.4274" x2="1123.815" y1="157.0635" y2="161.87"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="63" x="1172.5" y="199.0669">locates at</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="1098.4288" y="174.3311">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="1228.3498" y="243.0438">1</text></g><!--MD5=[56d2b675387baf517bab049a8af11898]
+reverse link Direction to BasicDrone--><g id="link_Direction_BasicDrone"><path codeLine="193" d="M1363.5,159.31 C1363.5,187.85 1363.5,222.4 1363.5,253.74 " fill="none" id="Direction-backto-BasicDrone" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1363.5,154.06,1359.5,163.06,1363.5,159.06,1367.5,163.06,1363.5,154.06" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38" x="1364.5" y="199.0669">facing</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="1337.9625" y="174.3311">1..4</text></g><!--MD5=[0935ef93a01362154324c701d95d08aa]
+link Search to Explorer--><g id="link_Search_Explorer"><path codeLine="195" d="M808.35,1041.5 C716.95,1041.5 555.72,1041.5 555.72,1041.5 " fill="none" id="Search-Explorer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="543.72,1041.5,549.72,1045.5,555.72,1041.5,549.72,1037.5,543.72,1041.5" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="821.49,1041.5,812.49,1037.5,816.49,1041.5,812.49,1045.5,821.49,1041.5" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="816.49" x2="808.49" y1="1041.5" y2="1041.5"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="639.5" y="1034.5669">performed by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="805.4427" y="1038.2787">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="551.4051" y="1037.3822">1</text></g><!--MD5=[745ca89e34d7b2ca12a8eb847a720697]
+link Map to Explorer--><g id="link_Map_Explorer"><path codeLine="196" d="M499.5,897.33 C499.5,932.22 499.5,1005.46 499.5,1005.46 " fill="none" id="Map-Explorer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="499.5,1017.46,503.5,1011.46,499.5,1005.46,495.5,1011.46,499.5,1017.46" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="499.5,884.07,495.5,893.07,499.5,889.07,503.5,893.07,499.5,884.07" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="499.5" x2="499.5" y1="889.07" y2="897.07"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="500.5" y="943.0669">explored by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="490.9375" y="904.0388">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="490.475" y="1006.4618">1</text></g><!--MD5=[924530736ad4d0307b3f039d4089e4e5]
+link Explorer to Report--><g id="link_Explorer_Report"><path codeLine="197" d="M499.5,1077.58 C499.5,1077.58 499.5,1158.19 499.5,1192.54 " fill="none" id="Explorer-Report" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="499.5,1205.94,503.5,1196.94,499.5,1200.94,495.5,1196.94,499.5,1205.94" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="499.5" x2="499.5" y1="1200.94" y2="1192.94"/><polygon fill="#181818" points="499.5,1065.58,495.5,1071.58,499.5,1077.58,503.5,1071.58,499.5,1065.58" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74" x="500.5" y="1151.0669">reported by</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="490.475" y="1085.7563">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="490.675" y="1194.8307">1</text></g><!--MD5=[828c4d31d86dd89ed1227b58a346bc74]
+link Runner to Explorer--><g id="link_Runner_Explorer"><path codeLine="198" d="M150.72,867.58 C170.88,880.65 195.01,895.66 217.5,908 C297.07,951.65 393.48,995 450.47,1019.69 " fill="none" id="Runner-to-Explorer" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="455.18,1021.73,448.5105,1014.4831,450.5917,1019.7432,445.3316,1021.8243,455.18,1021.73" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="286.5" y="943.0669">runs</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="151.4279" y="887.7934">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="439.479" y="1014.4613">1</text></g><!--MD5=[0765b6980444f643f12e8b1ca11a9a5b]
+@startuml
+!define MyTheme
+skinparam class {
+    BackgroundColor #LightGreen
+    BorderColor #000000
+    FontColor #000000
+}
+
+skinparam stereotypeCBackgroundColor #LightGreen
+skinparam stereotypeCBorderColor #000000
+skinparam stereotypeCFontColor #000000
+
+
+package drone {
+    interface Controller {
+        + flyCommand(): String
+        + headingCommand(dir: Direction): String
+        + echoCommand(dir: Direction): String
+        + scanCommand(): String
+        + stopCommand(): String
+    }
+
+    interface Drone {
+        + getBatteryLevel(): int
+        + drainBattery(cost: Integer): void
+        + getHeading(): Direction
+        + getLocation(): Coordinate
+        + moveForward(): void
+        + turnRight(): void
+        + turnLeft(): void
+    }
+
+    class DroneController {
+        +DroneController(drone: Drone)
+        +String flyCommand()
+        +String headingCommand(dir: Direction)
+        +String echoCommand(dir: Direction)
+        +String scanCommand()
+        +String stopCommand()
+    }
+  
+
+    class BasicDrone {
+        +BasicDrone(batteryLevel: int, headingDirection: Direction)
+        +getBatteryLevel(): int 
+        +drainBattery(cost: int): void
+        +getHeading(): Direction
+        +getLocation(): Coordinate
+        +moveForward(): void
+        +turnRight(): void
+        +turnLeft(): void
+    }
+}
+
+package map {
+    class ListMap
+
+    interface Map {
+        + addPointOfInterest(poi: PointOfInterest): void
+        + getEmergencySiteID(): String
+        + getClosetCreekID(): String
+    }
+
+    enum PointOfInterestType {
+        + CREEK
+        + EMERGENCY_SITE
+    }
+
+    class PointOfInterest {
+        + PointOfInterest(id: String, type: PointOfInterestType, location: Coordinate)
+        + getId(): String
+        + getType(): PointOfInterestType
+        + getLocation(): Coordinate
+    }
+}
+
+package stage {
+    class FindIsland {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    class ScanLine {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    class MoveToCorner {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    class UTurn {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    interface Stage {
+        + getDroneCommand(controller: Controller, dir: Direction): String
+        + processInfo(info: JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+}
+
+package position {
+    enum Direction {
+        + getSymbol(): String
+        + getRight(): String
+        + getLeft(): String
+        + fromSymbol(symbol: String): Direction
+    }
+
+    class Coordinate {
+        + Coordinate(x: int, y: int)
+        + getX(): int
+        + getY(): int
+        + distanceTo(other: Coordinate): double
+    }
+}
+
+package search {
+    class GridSearch
+
+    interface Search {
+        + GridSearch(Drone)
+        + performSearch(): String
+        + readResponse(response: JSONObject, map: Map): void
+    }
+
+}
+
+package report {
+    class NavigationReport {
+        + generateReport(map: Map): String
+    }
+
+    interface Report {
+        + generateReport(map: Map): String
+    }
+}
+
+class Explorer {
+    ' Minimal representation since details are not provided
+}
+
+class Runner {
+    + main(args: String[]): void
+}
+
+' stage package
+Stage <|.. MoveToCorner : "implements"
+Stage <|.. FindIsland : "implements"
+Stage <|.. ScanLine : "implements"
+Stage <|.. UTurn : "implements"
+
+' search package
+Search <|.up. GridSearch : "implements"
+
+' drone package
+Controller "1" <|.up. "1" DroneController : "implements"
+Drone <|.up. BasicDrone : "implements"
+DroneController o- -> Drone : "controls"
+
+' report package
+Report <|.down. NavigationReport : "generates"
+
+' position package
+Coordinate "1" <- -o "1" PointOfInterest : "located at"
+
+' map package
+Map <|.up. ListMap : "contains"
+PointOfInterest "1..*" <- -* ListMap : "stored in"
+PointOfInterestType "1..2" <- - PointOfInterest : "defines type of"
+
+Drone "1" <- -* "1" GridSearch : "scanned by"
+Controller "1" <- -* "1" GridSearch : "commanded by"
+GridSearch "1" *-right-> "1..*" Stage : "involves"
+
+Coordinate "1..*" <- -* "1" BasicDrone : "locates at"
+Direction "1..4" <- - BasicDrone : "facing"
+
+Search "1" <-right-* "1" Explorer : "performed by"
+Map "1" <- -* "1" Explorer : "explored by"
+Report "1" <-up-* "1" Explorer : "reported by"
+Runner "1" - -> "1" Explorer : "runs"
+@enduml
+
+@startuml
+skinparam class {
+    BackgroundColor #LightGreen
+    BorderColor #000000
+    FontColor #000000
+}
+
+skinparam stereotypeCBackgroundColor #LightGreen
+skinparam stereotypeCBorderColor #000000
+skinparam stereotypeCFontColor #000000
+
+
+package drone {
+    interface Controller {
+        + flyCommand(): String
+        + headingCommand(dir: Direction): String
+        + echoCommand(dir: Direction): String
+        + scanCommand(): String
+        + stopCommand(): String
+    }
+
+    interface Drone {
+        + getBatteryLevel(): int
+        + drainBattery(cost: Integer): void
+        + getHeading(): Direction
+        + getLocation(): Coordinate
+        + moveForward(): void
+        + turnRight(): void
+        + turnLeft(): void
+    }
+
+    class DroneController {
+        +DroneController(drone: Drone)
+        +String flyCommand()
+        +String headingCommand(dir: Direction)
+        +String echoCommand(dir: Direction)
+        +String scanCommand()
+        +String stopCommand()
+    }
+  
+
+    class BasicDrone {
+        +BasicDrone(batteryLevel: int, headingDirection: Direction)
+        +getBatteryLevel(): int 
+        +drainBattery(cost: int): void
+        +getHeading(): Direction
+        +getLocation(): Coordinate
+        +moveForward(): void
+        +turnRight(): void
+        +turnLeft(): void
+    }
+}
+
+package map {
+    class ListMap
+
+    interface Map {
+        + addPointOfInterest(poi: PointOfInterest): void
+        + getEmergencySiteID(): String
+        + getClosetCreekID(): String
+    }
+
+    enum PointOfInterestType {
+        + CREEK
+        + EMERGENCY_SITE
+    }
+
+    class PointOfInterest {
+        + PointOfInterest(id: String, type: PointOfInterestType, location: Coordinate)
+        + getId(): String
+        + getType(): PointOfInterestType
+        + getLocation(): Coordinate
+    }
+}
+
+package stage {
+    class FindIsland {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    class ScanLine {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    class MoveToCorner {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    class UTurn {
+        + getDroneCommand(Controller, Direction): String
+        + processInfo(JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+
+    interface Stage {
+        + getDroneCommand(controller: Controller, dir: Direction): String
+        + processInfo(info: JSONObject): void
+        + getNextStage(): Stage
+        + isFinished(): boolean
+        + isLastStage(): boolean
+    }
+}
+
+package position {
+    enum Direction {
+        + getSymbol(): String
+        + getRight(): String
+        + getLeft(): String
+        + fromSymbol(symbol: String): Direction
+    }
+
+    class Coordinate {
+        + Coordinate(x: int, y: int)
+        + getX(): int
+        + getY(): int
+        + distanceTo(other: Coordinate): double
+    }
+}
+
+package search {
+    class GridSearch
+
+    interface Search {
+        + GridSearch(Drone)
+        + performSearch(): String
+        + readResponse(response: JSONObject, map: Map): void
+    }
+
+}
+
+package report {
+    class NavigationReport {
+        + generateReport(map: Map): String
+    }
+
+    interface Report {
+        + generateReport(map: Map): String
+    }
+}
+
+class Explorer {
+}
+
+class Runner {
+    + main(args: String[]): void
+}
+
+Stage <|.. MoveToCorner : "implements"
+Stage <|.. FindIsland : "implements"
+Stage <|.. ScanLine : "implements"
+Stage <|.. UTurn : "implements"
+
+Search <|.up. GridSearch : "implements"
+
+Controller "1" <|.up. "1" DroneController : "implements"
+Drone <|.up. BasicDrone : "implements"
+DroneController o- -> Drone : "controls"
+
+Report <|.down. NavigationReport : "generates"
+
+Coordinate "1" <- -o "1" PointOfInterest : "located at"
+
+Map <|.up. ListMap : "contains"
+PointOfInterest "1..*" <- -* ListMap : "stored in"
+PointOfInterestType "1..2" <- - PointOfInterest : "defines type of"
+
+Drone "1" <- -* "1" GridSearch : "scanned by"
+Controller "1" <- -* "1" GridSearch : "commanded by"
+GridSearch "1" *-right-> "1..*" Stage : "involves"
+
+Coordinate "1..*" <- -* "1" BasicDrone : "locates at"
+Direction "1..4" <- - BasicDrone : "facing"
+
+Search "1" <-right-* "1" Explorer : "performed by"
+Map "1" <- -* "1" Explorer : "explored by"
+Report "1" <-up-* "1" Explorer : "reported by"
+Runner "1" - -> "1" Explorer : "runs"
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
