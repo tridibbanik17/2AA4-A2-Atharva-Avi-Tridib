@@ -26,7 +26,7 @@ public class ScanLineTest {
 
     @BeforeEach
     public void setUp() {
-        this.drone = new BasicDrone(10000, Direction.EAST);
+        this.drone = new BasicDrone(7000, Direction.EAST);
         this.controller = new DroneController(drone);
         this.stage = new ScanLine(true);
     }

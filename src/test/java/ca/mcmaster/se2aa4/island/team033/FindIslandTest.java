@@ -19,7 +19,7 @@ public class FindIslandTest {
     private Direction dir = Direction.EAST;
     private Drone drone;
     private DroneController controller;
-    private FindIsland p1;
+    private FindIsland test_var;
 
     private final String echoLeft = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"N\"}}";
     private final String echoRight = "{\"action\":\"echo\",\"parameters\":{\"direction\":\"S\"}}";
@@ -30,37 +30,37 @@ public class FindIslandTest {
     public void setup() {
         drone = new BasicDrone(battery, dir);
         controller = new DroneController(drone);
-        p1 = new FindIsland();
+        test_var = new FindIsland();
     }
 
     @Test
     public void testStateFly() {
-        assertEquals(fly, p1.getDroneCommand(controller, drone.getHeading()));
+        assertEquals(fly, test_var.getDroneCommand(controller, drone.getHeading()));
     }
 
     @Test
     public void testEchoLeft() {
-        p1.getDroneCommand(controller, drone.getHeading());
-        p1.processInfo(null);
+        test_var.getDroneCommand(controller, drone.getHeading());
+        test_var.processInfo(null);
         
-        assertEquals(echoLeft, p1.getDroneCommand(controller, drone.getHeading()));
+        assertEquals(echoLeft, test_var.getDroneCommand(controller, drone.getHeading()));
     }
 
     @Test
     public void testNextPhase() {
-        Stage nextPhase = p1.getNextStage();
+        Stage nextPhase = test_var.getNextStage();
         Stage correctPhase = new ScanLine(true);
         assertEquals(correctPhase.getClass(), nextPhase.getClass());
     }
 
     @Test
     public void testFinished() {
-        assertEquals(false, p1.isFinished());
+        assertEquals(false, test_var.isFinished());
     }
 
     @Test
     public void testLastPhase() {
-        assertEquals(false, p1.isLastStage());
+        assertEquals(false, test_var.isLastStage());
     }
 
     private JSONObject echoResponse(int range, String found) {

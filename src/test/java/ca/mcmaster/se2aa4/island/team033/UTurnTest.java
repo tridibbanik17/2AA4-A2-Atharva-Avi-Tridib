@@ -19,7 +19,7 @@ public class UTurnTest {
     private Direction dir = Direction.EAST;
     private Drone drone;
     private DroneController controller;
-    private UTurn p1;
+    private UTurn test_var;
 
     private List<String> leftTurnSequence = List.of(
         "{\"action\":\"heading\",\"parameters\":{\"direction\":\"S\"}}",
@@ -54,21 +54,21 @@ public class UTurnTest {
     private void runSequence(List<String> sequence) {
         String command;
         Iterator<String> expected = sequence.iterator();
-        while (!p1.isFinished() || expected.hasNext()) {
-            command = p1.getDroneCommand(controller, drone.getHeading());
+        while (!test_var.isFinished() || expected.hasNext()) {
+            command = test_var.getDroneCommand(controller, drone.getHeading());
             assertEquals(command, expected.next());
         }
     }
 
     @Test
     public void turnRightTest() {
-        p1 = new UTurn(false, true);
+        test_var = new UTurn(false, true);
         runSequence(rightTurnSequence);
     }
 
     @Test
     public void turnInwardTest() {
-        p1 = new UTurn(true, false);
+        test_var = new UTurn(true, false);
         runSequence(inwardLeftTurnSequence);
     }
 }
