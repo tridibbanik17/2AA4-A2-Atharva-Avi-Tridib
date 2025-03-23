@@ -36,4 +36,18 @@ public class ScanLineTest {
     public void testFly() {
         assertEquals(fly, stage.getDroneCommand(controller, drone.getHeading()));
     }
+
+    @Test
+    public void testScan() {
+        stage.getDroneCommand(controller, drone.getHeading());
+        stage.processInfo(null);
+        assertEquals(scan, stage.getDroneCommand(controller, drone.getHeading()));
+    }
+
+    @Test
+    public void testNextStage() {
+        Stage nextStage = stage.getNextStage();
+        Stage correctStage = new UTurn(true, true);
+        assertEquals(correctStage.getClass(), nextStage.getClass());
+    }    
 }
