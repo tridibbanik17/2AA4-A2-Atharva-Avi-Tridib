@@ -6,10 +6,7 @@ import org.json.JSONObject;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-/**
- * Stage responsible for scanning the environment to detect if the drone is off the island.
- * Uses echo and movement commands to gather location information.
- */
+// Stage to scan the environment and detect if the drone is off the island.
 public class ScanLine implements Stage {
 
     private enum State {
@@ -49,7 +46,7 @@ public class ScanLine implements Stage {
         return scanner.isOffIsland() && !scanner.hasMoved();
     }
 
-    // Inner class for environment scanning logic
+    // Handles environment scanning logic.
     private static class EnvironmentScanner {
         private boolean offIsland;
         private boolean hasMoved;
@@ -79,6 +76,7 @@ public class ScanLine implements Stage {
             return moveOutwards;
         }
 
+        // Updates state based on sensor data.
         public void processSensorData(JSONObject info) {
             switch (state) {
                 case FLY -> state = State.SCAN;
@@ -105,12 +103,14 @@ public class ScanLine implements Stage {
             }
         }
 
+        // Checks if the drone is off the land based on biome data.
         private boolean isDroneOffLand(JSONObject info) {
             JSONArray biomes = info.getJSONArray("biomes");
             String currentBiome = biomes.getString(0);
             return biomes.length() == 1 && currentBiome.equals("OCEAN");
         }
 
+        // Returns the command based on the current state.
         public String getCommand(Controller controller, Direction dir, State state) {
             return switch (state) {
                 case FLY -> controller.flyCommand();
