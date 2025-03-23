@@ -1,6 +1,7 @@
 package ca.mcmaster.se2aa4.island.team033;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ca.mcmaster.se2aa4.island.team033.map.PointOfInterest;
@@ -8,8 +9,14 @@ import ca.mcmaster.se2aa4.island.team033.map.PointOfInterestType;
 import ca.mcmaster.se2aa4.island.team033.position.Coordinate;
 
 public class PointOfInterestTest {
-    private final PointOfInterest poi1 = new PointOfInterest("01829792322", PointOfInterestType.EMERGENCY_SITE, new Coordinate(13, -16));
-    private final PointOfInterest poi2 = new PointOfInterest("2#01715170", PointOfInterestType.CREEK, new Coordinate(19, -23));
+    private PointOfInterest poi1;
+    private PointOfInterest poi2;
+
+    @BeforeEach
+    public void setUp() {
+        poi1 = new PointOfInterest("01829792322", PointOfInterestType.EMERGENCY_SITE, new Coordinate(13, -16));
+        poi2 = new PointOfInterest("2#01715170", PointOfInterestType.CREEK, new Coordinate(19, -23));
+    }
 
     @Test
     public void testGetID() {
