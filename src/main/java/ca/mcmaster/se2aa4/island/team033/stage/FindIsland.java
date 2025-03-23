@@ -5,10 +5,7 @@ import org.json.JSONObject;
 import ca.mcmaster.se2aa4.island.team033.drone.Controller;
 import ca.mcmaster.se2aa4.island.team033.position.Direction;
 
-/**
- * Stage responsible for locating the island by flying and echoing signals.
- * Transitions to the next stage once the island is found.
- */
+// Stage to locate the island using echo and flight commands.
 public class FindIsland implements Stage {
 
     private enum State {
@@ -48,7 +45,7 @@ public class FindIsland implements Stage {
         return false;
     }
 
-    // Inner classes for better organization and SRP adherence
+    // Handles island detection logic.
     private static class IslandLocator {
         private boolean atIsland;
         private boolean uTurnLeft;
@@ -74,6 +71,7 @@ public class FindIsland implements Stage {
             return atIsland;
         }
 
+        // Updates state based on sensor data.
         public void processSensorData(JSONObject info) {
             String echoStatus;
 
@@ -113,12 +111,11 @@ public class FindIsland implements Stage {
                         atIsland = true;
                     }
                 }
-
-                default -> throw new IllegalStateException("Unexpected state: " + state);
             }
         }
     }
 
+    // Handles flight commands based on the current state.
     private static class FlightNavigator {
         public String getCommand(Controller controller, Direction dir, State state) {
             return switch (state) {
