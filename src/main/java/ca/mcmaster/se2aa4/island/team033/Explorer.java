@@ -28,9 +28,9 @@ public class Explorer implements IExplorerRaid {
 
     @Override
     public void initialize(String s) {
-        // logger.info("** Initializing the Exploration Command Center"); 
+        logger.info("** Initializing the Exploration Command Center"); 
         JSONObject info = new JSONObject(new JSONTokener(new StringReader(s)));
-        // logger.info("** Initialization info:\n {}",info.toString(2));
+        logger.info("** Initialization info:\n {}",info.toString(2));
 
         String direction = info.getString("heading");
         Integer batteryLevel = info.getInt("budget");
@@ -40,21 +40,21 @@ public class Explorer implements IExplorerRaid {
         this.gridSearch = new GridSearch(drone);
         this.report = new NavigationReport();
 
-        // logger.info("The drone is facing {}", direction); // Uncomment to view the drone's heading direction at the start of the mission
-        // logger.info("Battery level is {}", batteryLevel); // Uncomment to view the drone's battery budget at the start of the mission
-        // logger.info("----------------------------Initialization Ends Here------------------------------------\n"); // Uncomment to mark the end of initialization
+        logger.info("The drone is facing {}", direction); // view the drone's heading direction at the start of the mission
+        logger.info("Battery level is {}", batteryLevel); // view the drone's battery budget at the start of the mission
+        logger.info("----------------------------Initialization Ends Here------------------------------------\n"); // mark the end of initialization
     }
 
     @Override
     public String takeDecision() {
         String decision = gridSearch.performSearch();
-        // logger.info("Decision: {}", decision); // Uncomment to view what action is executed by the drone controller each time 
+        logger.info("Decision: {}", decision); // view what action is executed by the drone controller each time 
         return decision;
     }
 
     @Override
     public void acknowledgeResults(String s) {
-        // logger.info("Response: {}", s); // Uncomment to track battery cost, captured biomes, any poi id (if found), status of drone after executing each action. 
+        logger.info("Response: {}", s); // track battery cost, captured biomes, any poi id (if found), status of drone after executing each action. 
         JSONObject response = new JSONObject(new JSONTokener(new StringReader(s)));
         gridSearch.readResponse(response, map);
     }
@@ -62,7 +62,7 @@ public class Explorer implements IExplorerRaid {
     @Override
     public String deliverFinalReport() {
         String missionReport = report.generateReport(map);
-        // logger.info(missionReport); // Uncomment to get the emergency site id and the closest creek id
+        logger.info(missionReport); // get the emergency site id and the closest creek id
         return missionReport;
     }
 }
