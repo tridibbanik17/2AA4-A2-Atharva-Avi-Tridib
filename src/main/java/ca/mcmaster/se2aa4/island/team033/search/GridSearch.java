@@ -67,13 +67,13 @@ public class GridSearch implements Search {
     private void updateBatteryLevel(JSONObject response) {
         int cost = response.getInt("cost");
         drone.drainBattery(cost);
-        // logger.info("Budget Remaining: {}", drone.getBatteryLevel()); // Uncomment to view the remaining battery budget after each action executed by the drone controller.
+        logger.info("Budget Remaining: {}", drone.getBatteryLevel()); // view the remaining battery budget after each action executed by the drone controller.
     }
 
     // Logs the drone's current position.
     private void logDronePosition() {
         drone.getLocation();
-        // logger.info("Drone Position: ({}, {})", drone.getLocation().getX(), drone.getLocation().getY()); // Uncomment to view the drone's updated position after each action executed by the drone controller.
+        logger.info("Drone Position: ({}, {})", drone.getLocation().getX(), drone.getLocation().getY()); // view the drone's updated position after each action executed by the drone controller.
     }
 
     // Processes additional information from the response.
